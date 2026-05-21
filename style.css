@@ -88,6 +88,7 @@ body.nav-closed .content {
     border-radius: 6px;
     line-height: 1;
     flex-shrink: 0;
+    margin-left: -6px;
 }
 .toggle-btn:hover{
     background: var(--lavender-hover)
