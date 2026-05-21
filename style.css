@@ -84,7 +84,7 @@ body.nav-closed .content {
     color:var(--purple-dark);
     font-size: 20px;
     cursor: pointer;
-    padding: 2px 6px;
+    padding: 2px 2px;
     border-radius: 6px;
     line-height: 1;
     flex-shrink: 0;
