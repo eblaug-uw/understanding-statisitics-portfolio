@@ -38,3 +38,18 @@ const toggleBtn = document.getElementById('sidebarToggle');
 toggleBtn.addEventListener('click', ()=>{
     document.body.classList.toggle('nav-closed');
 });
+
+// Report Original/Revised toggle
+document.querySelectorAll('.toggle-opt').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.dataset.target;
+    btn.parentElement.querySelectorAll('.toggle-opt').forEach(b => {
+      const on = b === btn;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-selected', on);
+    });
+    document.querySelectorAll('.report-version').forEach(v => {
+      v.classList.toggle('active', v.id === targetId);
+    });
+  });
+});
