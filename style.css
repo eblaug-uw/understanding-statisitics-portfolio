@@ -79,16 +79,19 @@ body.nav-closed .content {
     margin-bottom: 12px;
 }
 .toggle-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     border: none;
-    color:var(--purple-dark);
+    color: var(--purple-dark);
     font-size: 20px;
-    cursor: pointer;
-    padding: 2px 2px;
-    border-radius: 6px;
     line-height: 1;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
     flex-shrink: 0;
-    margin-left: -6px;
+    margin: 0;
 }
 .toggle-btn:hover{
     background: var(--lavender-hover)
