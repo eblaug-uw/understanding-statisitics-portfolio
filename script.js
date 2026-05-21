@@ -29,9 +29,6 @@ tocList.addEventListener('click', e => {
 });
 
 window.addEventListener('hashchange', () => openSection(location.hash.slice(1)));
-if(location.hash)
-    openSection(location.hash.slice(1));
-
 
 // Sidebar show/hide toggle
 const toggleBtn = document.getElementById('sidebarToggle');
@@ -52,4 +49,20 @@ document.querySelectorAll('.toggle-opt').forEach(btn => {
       v.classList.toggle('active', v.id === targetId);
     });
   });
+});
+
+// Slide viewer (Statistics in the Wild)
+document.querySelectorAll('.slides').forEach(viewer => {
+  const imgs = viewer.querySelectorAll('.slide-img');
+  const counter = viewer.querySelector('.slide-counter');
+  let i = 0;
+  function show(n) {
+    i = (n + imgs.length) % imgs.length;        // wraps around both ends
+    imgs.forEach((img, idx) => img.classList.toggle('active', idx === i));
+    if (counter) counter.textContent = (i + 1) + ' / ' + imgs.length;
+  }
+  viewer.querySelectorAll('.slide-btn').forEach(btn => {
+    btn.addEventListener('click', () => show(btn.dataset.dir === 'next' ? i + 1 : i - 1));
+  });
+  show(0);
 });

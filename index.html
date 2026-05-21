@@ -30,7 +30,7 @@
             </div>
 
         <section id="essay">
-            <details open>
+            <details closed>
             <summary><h2>A Good Eassy</h2></summary>
                 <p class="placeholder">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. <br>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. <br>
@@ -39,7 +39,7 @@
             </details>
         </section>
         <section id="hw1">
-            <details open>
+            <details>
                 <summary><h2>Homework 1: Data, Bias, and Study Design</h2></summary>
 
                 <p>A quiz on the core concepts of research methods, including data collection, sampling bias, and experimental design.</p>
@@ -124,7 +124,7 @@
             </details>
             </section>
             <section id="hw2">
-                <details open>
+                <details>
                     <summary><h2>Homework 2: <em>Title To Come</em></h2></summary>
 
                     <h3>Why I chose it</h3>
@@ -138,7 +138,7 @@
                 </details>
             </section>
             <section id="activity1">
-                <details open>
+                <details>
                     <summary><h2>Activity 1: Creating a Boxplot</h2></summary>
 
                     <p>An in-class assignment showing how to create and interpret a boxplot and how to analyze its distribution, skewness, and the most appropriate measure of central tendency.</p>
@@ -178,7 +178,7 @@
                 </details>
             </section>
             <section id="activity2">
-            <details open>
+            <details>
                 <summary><h2>Activity 2: <em>Title To Come</em></h2></summary>
 
                 <h3>Why I chose it</h3>
@@ -192,7 +192,7 @@
             </details>
             </section>
             <section id="report">
-                <details open>
+                <details>
                     <summary><h2>Revision: Descriptive Statistics Report</h2></summary>
 
                     <p>A descriptive analysis of <em>The Great British Bake Off</em> &mdash; who competes, who wins, and how age, gender expression, and apparent race are distributed across 16 series. Use the toggle to compare the original report with the revised version.</p>
@@ -203,7 +203,7 @@
                     </div>
 
                     <!-- ORIGINAL -->
-                    <article id="report-orginal" class="report-version active">
+                    <article id="report-original" class="report-version active">
                     <p class="pdf-link"><a href="pdfs/descriptive-statistics-original.pdf" target="_blank" rel="noopener">PDF Version here</a></p>
                     <h3>Introduction</h3>
                     <p>In this statistical report, we will analyze a dataset from The Great British Bake Off (GBBO). In addition to providing an overview of the observations and variables, it will highlight the winners, the contestants&rsquo; age, gender, and race, and any missing data. The central questions explored concern who competes and who wins, particularly with respect to age, gender expression, and apparent race. The dataset includes 192 contestants across 16 series.</p>
@@ -279,6 +279,41 @@
                     <p>Winners are generally younger than the pool (32.50 vs 37.57). White women are overrepresented among winners. The age distribution is right-skewed. Limitations: observer-assigned race/gender, no training or education data, and no episode-level scoring.</p>
                     </article>
                 </details>
+            </section>
+            <section id="wild">
+                 <details>
+                     <summary><h2>Statistics in the Wild</h2></summary>
+
+                        <p>For this assignment I built a handmade infographic on the probability behind <em>Magic: The Gathering</em> deckbuilding &mdash; mana curves, opening-hand odds, why decks run four copies of a card, and how lands are distributed. Use the toggle to switch versions, and the arrows to move through the slides. The full-resolution PDF is linked above the slides.</p>
+
+                        <div class="toggle" role="tablist" aria-label="Project version">
+                        <button class="toggle-opt active" data-target="wild-original" role="tab" aria-selected="true">Original</button>
+                        <button class="toggle-opt" data-target="wild-revised" role="tab" aria-selected="false">Revised</button>
+                        </div>
+
+                        <!-- ORIGINAL -->
+                        <article id="wild-original" class="report-version active">
+                        <p class="pdf-link"><a href="pdfs/the-probability-of-magic.pdf" target="_blank" rel="noopener">PDF Version here</a></p>
+
+                        <div class="slides">
+                            <div class="slide-stage">
+                            <img class="slide-img active" src="assets/magic/slide-1.svg" alt="Title slide: The Probability of Magic: The Gathering." />
+                            <img class="slide-img" src="assets/magic/slide-2.svg" alt="Infographic: mana curve, opening-hand probability, copy-count odds, and land distribution." />
+                            <img class="slide-img" src="assets/magic/slide-3.svg" alt="Written analysis of the infographic's data sources, statistical methods, and conclusions." />
+                            </div>
+                            <div class="slide-controls">
+                            <button class="slide-btn" data-dir="prev" aria-label="Previous slide">&lsaquo; Prev</button>
+                            <span class="slide-counter">1 / 3</span>
+                            <button class="slide-btn" data-dir="next" aria-label="Next slide">Next &rsaquo;</button>
+                            </div>
+                        </div>
+                        </article>
+
+                        <!-- REVISED -->
+                        <article id="wild-revised" class="report-version">
+                        <p class="placeholder">Revised version coming soon.</p>
+                        </article>
+                    </details>
                 </section>
          </main>
         <script src="script.js"></script>

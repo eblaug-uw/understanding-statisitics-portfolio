@@ -50,6 +50,7 @@ body.nav-closed .content {
     justify-content: space-between;
     padding: 0 26px;
     box-shadow: 0 2px 8px rba(0,0,0,0.22);
+    z-index: 100;
 }
 .topbar-title{
     color: var(--gold);
@@ -60,7 +61,6 @@ body.nav-closed .content {
     color: var(--gold);
     font-size: 0.95rem;
 }
-
 
 /* sidebar */
 .sidebar {
@@ -74,6 +74,7 @@ body.nav-closed .content {
     padding: 22px 20px;
     transition: width 0.25s ease;
     overflow-x: hidden;
+    z-index: 50; 
 }
 .sidebar-head{
     display: flex;
@@ -315,3 +316,46 @@ figcaption { font-size: 0.85rem; color: #6b6480; font-style: italic; margin-top:
 .pdf-link { margin: 0 0 16px; }
 .pdf-link a { color: var(--purple); font-weight: 600; text-decoration: underline; }
 .pdf-link a:hover { color: var(--purple-dark); }
+
+/* stats in the wild*/
+/* Slide viewer */
+.slides { margin: 14px 0 4px; }
+.slide-stage {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--card-line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+.slide-img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.slide-img.active { display: block; }
+.slide-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+.slide-btn {
+  background: var(--purple);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.slide-btn:hover { background: var(--purple-dark); }
+.slide-counter {
+  font-weight: 600;
+  color: var(--purple-dark);
+  min-width: 54px;
+  text-align: center;
+}
