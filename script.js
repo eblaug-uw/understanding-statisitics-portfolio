@@ -5,7 +5,7 @@ document.querySelectorAll('main.content section').forEach(section =>{
     if(!heading)
         return;
 
-    const li = document.createElmenet('li');
+    const li = document.createElement('li');
     const a = document.createElement('a');
     a.href = '#' + section.id;
     a.textContent = heading.textContent;
