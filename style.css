@@ -212,6 +212,7 @@ section h3{
     color: var(--purple-dark);
     font-size: 1.2rem;
     margin: 26px 0 8px;
+    text-align: center;
 }
 section p{
     margin: 0 0 14px;
@@ -336,7 +337,7 @@ figcaption { font-size: 0.85rem; color: #6b6480; font-style: italic; margin-top:
 .fig-pair { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; }
 .fig-pair figure { flex: 1 1 280px; margin: 8px 0; }
 .fig-narrow img { max-width: 340px; }
-.fig-sm img { max-width: 200px; }
+.fig-sm img { max-width: 300px; }
 .fig-sm { text-align: left; }
 
 
