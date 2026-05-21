@@ -45,7 +45,23 @@ body{
     color: var(--gold-dark);
     font-size: 0.95rem;
 }
-
+.topbar-left{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.toggle-btn{
+    background: transparent;
+    border: none;
+    color:var(--gold);
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 6px;
+    line-height: 1;
+}
+.toggle-btn:hover{
+    background:rgb( 255, 255, 255, 0.15);
+}
 /* sidebar */
 .sidebar {
     position: fixed;

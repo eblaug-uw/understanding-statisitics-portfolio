@@ -31,3 +31,10 @@ tocList.addEventListener('click', e => {
 window.addEventListener('hashchange', () => openSection(location.hash.slice(1)));
 if(location.hash)
     openSection(location.hash.slice(1));
+
+
+// Sidebar show/hide toggle
+const toggleBtn = document.getElementById('sidebarToggle');
+toggleBtn.addEventListener('click', ()=>{
+    document.body.classList.toggle('nav-closed');
+});
