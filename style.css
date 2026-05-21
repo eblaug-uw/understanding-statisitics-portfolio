@@ -14,7 +14,7 @@ html{
 }
 /* base */
 *{
-    box-sizing: boarder-box;
+    box-sizing: border-box;
 }
 body{
     margin: 0;
@@ -46,15 +46,15 @@ body.nav-closed .content {
     align-items: center;
     justify-content: space-between;
     padding: 0 26px;
-    box-shadow: 0 2xp 8px rba(0,0,0,0.22);
+    box-shadow: 0 2px 8px rba(0,0,0,0.22);
 }
 .topbar-title{
-    color: var(--gold-dark);
+    color: var(--gold);
     font-weight: 700;
     font-size: 1.05rem;
 }
 .topbar-name{
-    color: var(--gold-dark);
+    color: var(--gold);
     font-size: 0.95rem;
 }
 
@@ -98,7 +98,7 @@ body.nav-closed .content {
     letter-spacing: 0.12em;
     color: var(--purple-dark);
     font-weight: 700;
-    margin: 0 0 12px;
+    margin: 0;
 }
 .toc{
     list-style: none;
