@@ -149,3 +149,24 @@ section h3{
 section p{
     margin: 0 0 14px;
 }
+/* Collapsible */
+details > summary {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+}
+details > summary::-webkit-details-marker{
+    display: none;
+}
+details > summary::after{
+    content: "▾";
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    font-size: 1.3rem;
+    color: var(--purple);
+    transition: transform 0.2s ease;
+}
+details[open] > summary::after {
+    transform: rotate(180deg);
+}
