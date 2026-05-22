@@ -1,0 +1,20 @@
+{
+  "name": "understanding-statistics-portfolio",
+  "private": true,
+  "scripts": {
+    "format": "prettier . --write",
+    "lint:html": "htmlhint \"**/*.html\"",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:js": "eslint \"**/*.js\"",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.10.0",
+    "stylelint-config-recommended": "^14.0.1",
+    "eslint": "^9.13.0",
+    "@eslint/js": "^9.13.0",
+    "globals": "^15.11.0"
+  }
+}
