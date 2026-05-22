@@ -397,3 +397,7 @@ figcaption { font-size: 0.85rem; color: #6b6480; font-style: italic; margin-top:
   min-width: 54px;
   text-align: center;
 }
+
+.line{
+    color:var(--gold)
+}
