@@ -507,6 +507,14 @@
               Original
             </button>
             <button
+              class="toggle-opt redline"
+              data-target="report-redline"
+              role="tab"
+              aria-selected="false"
+            >
+              Redline
+            </button>
+            <button
               class="toggle-opt"
               data-target="report-revised"
               role="tab"
@@ -621,7 +629,7 @@
             <figure>
               <img src="assets/report/original-fig3-age.png" loading="lazy" />
               <figcaption>
-                Figure 3 &mdash; Age distribution of contestants.
+                Figure 3
               </figcaption>
             </figure>
             <p>
@@ -658,6 +666,290 @@
               and education data, and lack of detailed episode-level scoring.
             </p>
 
+            <h3>Work Cited</h3>
+            <p class="citation">
+              Blaugnelson E. 2026 Apr 15. Report 1: Descriptive Statistics. N/A.
+              [accessed 2026 Apr 15].
+              <a
+                href="https://app.powerbi.com/reportEmbed?reportId=52017a4c-64e0-4903-9485-87d2becbd27e&amp;autoAuth=true&amp;ctid=f6b6dd5b-f02f-441a-99a0-162ac5060bd2"
+                target="_blank"
+                rel="noopener"
+                >https://app.powerbi.com/reportEmbed?reportId=52017a4c-64e0-4903-9485-87d2becbd27e&amp;autoAuth=true&amp;ctid=f6b6dd5b-f02f-441a-99a0-162ac5060bd2</a
+              >
+            </p>
+            <p class="citation">
+              Blaugnelson E. 2026 Apr 15. Bake Off Contestants modified by
+              Elijah Blaugnleson. N/A. [accessed 2026 Apr 19].
+              <a
+                href="https://uwnetid-my.sharepoint.com/:x:/g/personal/eblaug_uw_edu/IQBG1kY4JVuoSY0E27OPFzsPAV2QtG107fZ3-_vO5O_ln_k?e=yKXX62"
+                target="_blank"
+                rel="noopener"
+                >https://uwnetid-my.sharepoint.com/:x:/g/personal/eblaug_uw_edu/IQBG1kY4JVuoSY0E27OPFzsPAV2QtG107fZ3-_vO5O_ln_k?e=yKXX62</a
+              >
+            </p>
+            <p class="citation">
+              Blaugnelson E. 2026 Apr 19. Line graph color contrast and
+              readability. N/A. [accessed 2026 Apr 19].
+              <a
+                href="https://claude.ai/share/8b580bfc-fd60-4c2f-abe6-48a68c0dc04b"
+                target="_blank"
+                rel="noopener"
+                >https://claude.ai/share/8b580bfc-fd60-4c2f-abe6-48a68c0dc04b</a
+              >
+            </p>
+          </article>
+
+          <!-- Redline -->
+          <article id="report-redline" class="report-version">
+            <h3>The Great British Bake Off By the Numbers</h3>
+            <h3>Introduction</h3>
+            <p>
+              In this statistical report, we will analyze a dataset from The
+              Great British Bake Off (GBBO). In addition to providing an
+              overview of the observations and variables, it will highlight the
+              winners, the content's age, gender, and race, as well
+              <ins>as </ins>any missing data. The central questions explored in
+              this report concern who competes and who wins, particularly with
+              respect to age, gender expression, and apparent race. By examining
+              distributions and frequencies across these variables, this report
+              aims to illuminate patterns that may reflect broader social
+              dynamics within the show. The dataset includes 192 contestants
+              across 16 series, with variables ranging from demographic
+              information to competition performance.
+            </p>
+
+            <h3>The Data Set</h3>
+            <p>
+              As stated in the introduction, this data set is derived from the
+              GBBO, but let's dive deeper into the variable types and what we
+              can glean from them. The nominal variables in the data are Gender
+              Expression, Apparent Race, Occupation, Hometown, Series, and
+              Publisher. There are only a handful of interval and ratio
+              variables: Age, Number of Star Bakers, and Ranking. Lastly, we
+              have only one ordinal variable in the data set: Placement. With
+              that in mind, the following charts and visuals will show when
+              different statistical measures are appropriate, how to read
+              distributions for both numerical and categorical data, and why it
+              is important to let the data guide our analysis rather than
+              relying on assumptions.
+            </p>
+
+            <h3>Who Are Our Winners</h3>
+            <del
+              ><figure>
+                <img
+                  src="assets/report/original-fig1-winners.png"
+                  loading="lazy"
+                />
+                <figcaption>Figure 1</figcaption>
+              </figure></del
+            >
+            <ins
+              ><figure>
+                <img
+                  src="assets/report/revised-table1-winners.png"
+                  alt="A table titled “Winners Information” listing the winners of The Great British Bake Off across 16 series. Columns show series number, baker name, gender expression, age, occupation, and number of Star Baker awards. Winners range from Series 1's Edward &quot;Edd&quot; Kimber (age 24, debt collector, 0 Star Bakers) to Series 16's Jasmine Mitchell (age 23, medical student, 5 Star Bakers). The majority of winners are female, ages range from 20 to 60, and Star Baker counts range from 0 to 5."
+                  loading="lazy"
+                />
+                <figcaption>
+                  Table 1 - Winners of The Great British Bake Off, Series 1–16:
+                  a breakdown of each winner's name, gender expression, age at
+                  time of winning, occupation, and number of Star Baker titles
+                  earned during their series.
+                </figcaption>
+              </figure></ins
+            >
+            <p>
+              <del>Referring to Figure 1, we can</del><ins>Let's</ins> see the
+              winners of each series, their gender expression, age, occupation,
+              <ins>and </ins>the number of times they won Star Baker<del
+                >, and their approximate hometown</del
+              ><ins> (Table 1)</ins>. <del>So, let's break it down:</del
+              ><ins>Breaking it down:</ins> out of all the bakers, nine out of
+              16 are women, meaning seven out of 16 are men, or 56.25% &amp;
+              43.75%, respectively. As for the winners' ages, we have a minimum
+              of 20, a mean of 32.50, a median of 31, a mode of 30, and a
+              maximum of 60 (an age range of 40). Moving on to Star Baker, we
+              have a minimum of 0, a mean of 1.88, a median of 2, a mode of 2,
+              and a maximum of 5.
+            </p>
+            <ins
+              ><figure>
+                <img
+                  src="assets/report/revised-fig1-starbaker.png"
+                  alt="A bar chart titled “Total Star Baker Awards by Series Winner” showing the number of Star Baker awards earned by 15 of the 16 Great British Bake Off series winners, sorted from highest to lowest. Jasmine Mitchell tops the chart with 5 awards. Candice Brown, Nadiya Hussain, and Syabira Yusoff each have 3. Georgie Grasso, Giuseppe Dell'Anno, Matty Edgell, Peter Sawkins, Rahul Mandal, and Sophie Faldo each have 2. Frances Quinn, Joanne “Jo” Wheatley, John Whaite, and Nancy Birtwhistle each have 1. David Atherton has 0. Series 1 winner Edward “Edd” Kimber is not included as the Star Baker award did not exist in that series."
+                  loading="lazy"
+                />
+                <figcaption>
+                  Figure 1 - Total Star Baker awards earned by each series
+                  winner of The Great British Bake Off, ranked in descending
+                  order. Edward "Edd" Kimber (Series 1 winner) is excluded, as
+                  the Star Baker award did not exist during the first series.
+                  Jasmine Mitchell leads with 5 awards, while David Atherton is
+                  the only remaining winner to have earned none.
+                </figcaption>
+              </figure></ins
+            >
+            <p>
+              David Atherton of Series ten won with zero Star Bakers, the only
+              contestant to do so<del> (</del><ins>, discounting </ins>Edd from
+              Series one<ins>, who</ins> is marked as <ins>having won </ins>zero
+              Star Baker because the title was not given out during that
+              series<del>)</del><ins> (Figure 1)</ins>.<del>
+                Lastly, the winners' locations are scattered around central
+                England, with one each in Wales and Scotland.</del
+              >
+            </p>
+
+            <h3>Gender <del>and</del><ins>&amp;</ins> Race</h3>
+              <div><del><figure>
+                <img
+                src="assets/report/original-fig2-gender-race.png"
+                loading="lazy"
+                />
+              <figcaption>Figure 2</figcaption>
+            </figure></del></div>
+            <div class="col2">
+              <div>
+                <p>
+                  Breaking down <del>Figure 2 of </del>the contestants and
+                  winners, we can see that 9 winners were presented as women,
+                  and 97 contestants were presented as women; 13 winners were
+                  presented as white, whereas 140 contestants were presented as
+                  white<ins> (Figure 2)</ins>. Drilling down into this, we can
+                  see that seven of the 16 winners are white women, and 68 of
+                  the contestants <del>were</del><ins>are</ins> white women<ins>
+                    (Figure 3)</ins
+                  >. This yields 43.75% and 35.42%, respectively, an
+                  8.33-percentage-point gap, indicating that white women win the
+                  show at a higher-than-expected rate. It's worth noting that
+                  the number of white contestants is declining slightly in later
+                  series.
+                </p>
+               <ins><figure>
+                <img
+                    src="assets/report/revised-gender.png"
+                    alt="A horizontal bar chart titled “Total Contestants, Total Winners by Gender Expression” comparing the number of Great British Bake Off contestants (light blue) and series winners (dark blue) for female and male participants. Both groups have roughly equal numbers of total contestants, each at approximately 95–100. Female winners number around 10, slightly more than male winners, who number around 6. The chart suggests near parity in both participation and wins across gender expression."
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Figure 2 - Total contestants versus total winners on The
+                    Great British Bake Off, broken down by gender expression.
+                    The contestant pool is nearly equal between female and male
+                    participants, and the winner split is similarly close, with
+                    female winners holding a slight edge.
+                  </figcaption>
+            </figure></ins>
+              </div>
+              <div>
+                <ins><figure>
+                  <img
+                    src="assets/report/revised-race.png"
+                    alt="A horizontal bar chart titled “Total Contestants, Total Winners by Apparent Race” comparing the number of Great British Bake Off contestants (light blue) and series winners (dark blue) across five racial categories. White contestants far outnumber all other groups, with approximately 130 total contestants and around 10 winners. Asian contestants number roughly 35, with 1 winner. Black contestants number roughly 20, with no winners shown. Unknown and MENA categories each have only a small number of contestants (under 5) and no winners. The large gap between contestant numbers and winners is most stark for non-White groups."
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Figure 3 - Total contestants versus total winners on The
+                    Great British Bake Off, broken down by apparent race. White
+                    contestants make up the large majority of both the overall
+                    contestant pool and series winners, while Asian and Black
+                    contestants appear at notably lower rates, and MENA &
+                    Unknown categories have had no series winners to date.
+                  </figcaption>
+                </figure></ins>
+                <p>
+                  There are several better ways to account for racial identities
+                  assigned to a single race. First, and the best in this case,
+                  is to add Multiracial or Mixed categories, since this data is
+                  based on observed rather than reported data. Adding one of
+                  these categories allows for the acceptance of multiracial
+                  identities without assigning them to the contestant. Beyond
+                  adding the Multiracial or Mixed categories, the data set could
+                  allow multiple racial identities for each contestant. The best
+                  option would be to use self-identification, but because not
+                  all contestants do, this is not possible with this data.
+                </p>
+              </div>
+            </div>
+
+            <h3>How Old?</h3>
+            <del><figure>
+               <img src="assets/report/original-fig3-age.png" loading="lazy" />
+              <figcaption>
+                Figure 3
+              </figcaption>
+            </figure></del>
+            <ins><figure>
+              <img
+                src="assets/report/revised-fig4-age.png"
+                alt="Bar chart showing age distribution of GBBO contestants with age groups on the x-axis and the number of contestants on the y-axis. The highest number of contestants is in the 30-39 age group with around 65 participants, followed by the 20-29 age group with about 50, while the 10-19 and 70+ age groups have the fewest contestants."
+                loading="lazy"
+              />
+              <figcaption>
+                Figure 4 - Age distribution of The Great British Bake-Off
+                contestants across all series. The 30–39 age group is the most
+                represented, followed closely by those in their 20s, with
+                participation dropping off steadily among older age groups and
+                remaining minimal at the extremes.
+              </figcaption>
+            </figure></ins>
+            <div class="col2 center">
+              <ins><figure class="fig-sm">
+                <img
+                  src="assets/report/revised-boxplot.png"
+                  alt="A table titled “Contestant Ages Distribution” with two columns: Age Group and Count of Baker. The 30–39 age group has the most contestants at 64, followed by 20–29 with 51, 40–49 with 29, 50–59 with 23, 60–69 with 15, 10–19 with 7, and 70+ with 3. The total number of contestants across all age groups is 192."
+                  loading="lazy"
+                />
+                <figcaption>
+                  Table 2 - Contestant age distribution across all series of The
+                  Great British Bake Off, grouped into seven age brackets. Of
+                  192 total contestants, the majority fall between 20 and 39
+                  years old, with the 30–39 group being the largest.
+                </figcaption>
+              </figure></ins>
+              <div>
+                <p>
+                  <del>Examining Figure 3, we can see the range of</del
+                  ><ins>The age range of</ins> the contestants is 17<del>
+                    – 71 or 54 years</del
+                  ><ins>–71 (54 years)</ins>; we have a mean of 37.57, a median
+                  of 33, and a mode of 31.
+                  <del
+                    >Looking at our histogram, we can see the distribution
+                    is</del
+                  ><ins>We have a</ins> right-skewed<ins> distribution</ins>,
+                  with most contestants between 30<del>-39</del
+                  ><ins> and 39</ins> years of age, followed by those between
+                  20<del>-29 years of age</del
+                  ><ins> and 29 (Figure 4 &amp; Table 2)</ins>.
+                </p>
+                <h3>What's Missing?</h3>
+                <p>
+                  The main variables missing from this dataset are as follows:
+                  whether the contestants had any formal culinary training or
+                  were entirely self-taught, detailed scoring information, and
+                  the contestants' education level, which would help round out
+                  the dataset. In addition to expanding this data, a
+                  complementary dataset on the judges could help identify any
+                  bias they may have.
+                </p>
+              </div>
+            </div>
+            <h3>Conclusion</h3>
+            <p>
+              This descriptive analysis of The Great British Bake Off identifies
+              several notable patterns. Winners are generally younger than the
+              overall contestant pool, with a mean winning age of 32.50 compared
+              to 37.57 for all contestants. White women are overrepresented
+              among winners relative to their proportion in the contestant pool,
+              winning at a rate 8.33 percentage points higher than expected. The
+              age distribution of contestants is right-skewed, with a peak in
+              the 30–39 range. These findings prompt further inquiry into which
+              forms of culinary creativity are recognized and rewarded. The
+              primary limitations of this dataset include reliance on
+              observer-assigned race and gender, absence of culinary training
+              and education data, and lack of detailed episode-level scoring.
+            </p>
             <h3>Work Cited</h3>
             <p class="citation">
               Blaugnelson E. 2026 Apr 15. Report 1: Descriptive Statistics. N/A.
