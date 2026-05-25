@@ -43,9 +43,12 @@ document.querySelectorAll(".toggle-opt").forEach((btn) => {
       b.classList.toggle("active", on);
       b.setAttribute("aria-selected", on);
     });
-    document.querySelectorAll(".report-version").forEach((v) => {
-      v.classList.toggle("active", v.id === targetId);
-    });
+    btn
+      .closest("section")
+      .querySelectorAll(".report-version")
+      .forEach((v) => {
+        v.classList.toggle("active", v.id === targetId);
+      });
   });
 });
 

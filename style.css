@@ -312,6 +312,29 @@ details[open] > summary::after {
   content: " ✓ corrected";
   font-size: 0.78rem;
 }
+/* Original tab: an answer the student selected that is wrong */
+.quiz ul li.wrong {
+  background: rgba(192, 57, 43, 0.1);
+  border-left-color: #c0392b;
+  color: #c0392b;
+}
+.quiz ul li.wrong::after {
+  content: " ✗ my answer";
+  color: #c0392b;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+/* Original tab: a correct answer the student missed (check-all questions) */
+.quiz ul li.missed {
+  background: rgba(192, 57, 43, 0.1);
+  border-left-color: #c0392b;
+}
+.quiz ul li.missed::after {
+  content: " ✗ missed";
+  color: #c0392b;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
 del {
   color: #b3261e;
 }
@@ -511,6 +534,43 @@ figcaption {
   background: #1e7e34;
 }
 
+/* Redline: removed vs. added tables (mirrors the figure treatment) */
+.report-version del:has(> table),
+.report-version ins:has(> table) {
+  display: block;
+  margin: 14px 0;
+}
+.report-version del:has(> table) {
+  opacity: 0.65;
+}
+/* keep the table text readable; the badge carries the removed/added signal */
+.report-version del:has(> table) table,
+.report-version ins:has(> table) table {
+  color: var(--ink);
+  font-weight: 400;
+  text-decoration: none;
+}
+.report-version del:has(> table)::before,
+.report-version ins:has(> table)::before {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.report-version del:has(> table)::before {
+  content: "Removed";
+  background: #c0392b;
+}
+.report-version ins:has(> table)::before {
+  content: "Added";
+  background: #1e7e34;
+}
+
 .pdf-link {
   margin: 0 0 16px;
 }
@@ -584,4 +644,25 @@ figcaption {
   background: var(--gold);
   border-radius: 2px;
   margin: 24px 0;
+}
+
+/* Answers */
+.answer {
+  margin: 8px 0 4px;
+  padding: 10px 14px;
+  background: #faf7fe;
+  border-left: 3px solid var(--purple);
+  border-radius: 0 6px 6px 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+.answer::before {
+  content: "Answer";
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--purple);
 }

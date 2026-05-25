@@ -89,207 +89,587 @@
           </p>
           <hr class="line" />
           <h3>Compare the original to the revision</h3>
-          <p>
-            Changed answers will be <del>struck out</del>, and their replacement
-            is shown in <span class="fix">green and bold</span>. As well as some
-            changes to the questions that made them easier for me to understand,
-            These changes will also be <del>struck out</del> or
-            <span class="fix">green and bold</span>.
-          </p>
+          <div class="toggle" role="tablist" aria-label="Quiz version">
+            <button
+              class="toggle-opt active"
+              data-target="hw1-original"
+              role="tab"
+              aria-selected="true"
+            >
+              Original
+            </button>
+            <button
+              class="toggle-opt redline"
+              data-target="hw1-redline"
+              role="tab"
+              aria-selected="false"
+            >
+              Redline
+            </button>
+            <button
+              class="toggle-opt"
+              data-target="hw1-revised"
+              role="tab"
+              aria-selected="false"
+            >
+              Revised
+            </button>
+          </div>
 
-          <ol class="quiz">
-            <li>
-              The paper says there is an 80% chance of rain today, so you plan
-              indoor activities. Then it doesn't rain. Was the forecast wrong?
-              <ul>
-                <li>Yes</li>
-                <li class="sel">No</li>
-              </ul>
-            </li>
-            <li>
-              Most probabilities we will deal with in psychology are 0 or 1.
-              <ul>
-                <li>True</li>
-                <li class="sel">False</li>
-              </ul>
-            </li>
-            <li>
-              The probability that you will do well on this quiz depends on the
-              probability of you completed the reading. In other words, these
-              two events are NOT independent.
-              <ul>
-                <li class="sel">True</li>
-                <li>False</li>
-              </ul>
-            </li>
-            <li>
-              The probability that you will do well on this quiz depends on the
-              probability of rain today. In other words, these two events ARE
-              independent.
-              <ul>
-                <li><del>True</del></li>
-                <li class="fix">False</li>
-              </ul>
-            </li>
-            <li>
-              You have a bag of marbles. There are 3 red marbles, 2 green
-              marbles, 7 yellow marbles, and 3 blue marbles. What is the
-              probability of drawing a blue marble?
-              <ul>
-                <li class="sel">0.2</li>
-              </ul>
-            </li>
-            <li>
-              S<del
-                >you have a bag of marbles. There are 3 red marbles, 2 green
-                marbles, 7 yellow marbles, and 3 blue marbles.</del
-              >
-              <span class="fix">Same bag of marbles.</span> What is the
-              probability of drawing a yellow or red marble? (round to two
-              digits)
-              <ul>
-                <li class="sel">0.67</li>
-              </ul>
-            </li>
-            <li>
-              <del
-                >you have a bag of marbles. There are 3 red marbles, 2 green
-                marbles, 7 yellow marbles, and 3 blue marbles.</del
-              >
-              <span class="fix">Same bag of marbles.</span> What is the
-              probability of drawing something other than a red marble?
-              <ul>
-                <li class="sel">0.8</li>
-              </ul>
-            </li>
-            <li>
-              You throw 2 dice. What is the probability that the sum of the two
-              dice will be 5? (round to two decimals)
-              <ul>
-                <li class="sel">0.11</li>
-              </ul>
-            </li>
-            <li>
-              Which of the following pairs are independent events?
-              <em>Check all that apply.</em>
-              <ul>
-                <li class="sel">Two coin flips</li>
-                <li>A student&rsquo;s midterm and final grades in a class</li>
-                <li>Draw an ace, leave it out, then draw an ace again</li>
-                <li class="sel">
-                  Draw an ace, put it back, then draw an ace again
-                </li>
-              </ul>
-            </li>
-            <li>
-              You win a game if you roll a die and get an odd number and flip a
-              coin and get tails. What is the probability that you win?
-              <ul>
-                <li class="sel">0.25</li>
-              </ul>
-            </li>
-            <li>
-              Remember that P(A or B) = P(A) + P(B) - P(A and B).
-              <del
-                >In other words, the probability of both A and B happening, is
-                the probability that A happens, plus the probability that B
-                happens, minus the probability that both A and B happen.</del
-              >
-              Using this formula, what are the odds of getting a head from a
-              coin toss or a 5 from a roll of a die?
-              <ul>
-                <li class="sel">0.58</li>
-              </ul>
-            </li>
-            <li>
-              A survey showed that 60% of all adults in your city take public
-              transportation to work. If 3 people are chosen at random, what is
-              the probability that they will all take public transportation to
-              work? (round to three decimal places)
-              <ul>
-                <li class="sel">0.216</li>
-              </ul>
-            </li>
-            <li>
-              A deck has 52 cards, 13 of which are spades. What is the
-              probability that you draw two cards from a deck and both of them
-              are spades? (round to 4 decimals)
-              <ul>
-                <li class="sel">0.0588</li>
-              </ul>
-            </li>
-            <li>
-              You flip a coin three times. Is it more likely to get heads all
-              three times or heads, then tails, then heads?
-              <ul>
-                <li>HHH</li>
-                <li>HTH</li>
-                <li class="sel">They are both equally likely</li>
-              </ul>
-            </li>
-            <li>
-              The binomial distribution is a
-              <ul>
-                <li>
-                  distribution that happens to be normal, with 68% of the data
-                  described by one standard deviation.
-                </li>
-                <li class="sel">
-                  distribution for which there are just two possible outcomes
-                  with fixed probabilities summing to one.
-                </li>
-                <li>
-                  distribution can be used to compute the probabilities in
-                  situations in which there are more than two possible outcomes.
-                </li>
-                <li>
-                  synonym for the Poisson distribution, a type of skewed
-                  distribution common in statistics.
-                </li>
-              </ul>
-            </li>
-            <li>
-              Which of the following probabilities can be found using the
-              binomial distribution? <em>Check all that apply.</em>
-              <ul>
-                <li class="sel">
-                  The probability that 3 out of 8 tosses of a coin will result
-                  in heads
-                </li>
-                <li class="sel">
-                  The probability that Susan will beat Shannon in two of their
-                  three tennis matches
-                </li>
-                <li class="fix">
-                  The probability of rolling at least two 3's and two 4's out of
-                  twelve rolls of a die
-                </li>
-                <li>The probability of getting a full house poker hand</li>
-                <li class="sel">
-                  The probability that all 5 of your randomly-chosen group
-                  members will have passed the midterm
-                </li>
-                <li class="sel">
-                  TThe probability that a student blindly guessing will get at
-                  least 8 out of 10 multiple-choice questions correct
-                </li>
-                <li>
-                  The probability that most people in our class drink coffee.
-                </li>
-              </ul>
-            </li>
-          </ol>
-          <hr class="line" />
-          <h3>Summary of what I learned</h3>
-          <p>
-            Revisiting this assignment enabled me to progress from rote
-            memorization of formulas to a deeper comprehension of their
-            underlying logic. Re-examining the marble, dice, and coin problems
-            reinforced the addition and multiplication rules. The binomial
-            question proved most valuable; I discovered that my error stemmed
-            from failing to reframe the problem in binary terms (drawing it
-            out).
-          </p>
+          <!-- ORIGINAL -->
+          <article id="hw1-original" class="report-version active">
+            <ol class="quiz">
+              <li>
+                The paper says there is an 80% chance of rain today, so you plan
+                indoor activities. Then it doesn't rain. Was the forecast wrong?
+                <ul>
+                  <li>Yes</li>
+                  <li class="sel">No</li>
+                </ul>
+              </li>
+              <li>
+                Most probabilities we will deal with in psychology are 0 or 1.
+                <ul>
+                  <li>True</li>
+                  <li class="sel">False</li>
+                </ul>
+              </li>
+              <li>
+                The probability that you will do well on this quiz depends on
+                the probability of rain today. In other words, these two events
+                ARE independent.
+                <ul>
+                  <li class="wrong">True</li>
+                  <li>False</li>
+                </ul>
+              </li>
+              <li>
+                The probability that you will do well on this quiz depends on
+                the probability of rain today. In other words, these two events
+                ARE independent.
+                <ul>
+                  <li class="sel">True</li>
+                  <li>False</li>
+                </ul>
+              </li>
+              <li>
+                You have a bag of marbles. There are 3 red marbles, 2 green
+                marbles, 7 yellow marbles, and 3 blue marbles. What is the
+                probability of drawing a blue marble?
+                <ul>
+                  <li class="sel">0.2</li>
+                </ul>
+              </li>
+              <li>
+                You have a bag of marbles. There are 3 red marbles, 2 green
+                marbles, 7 yellow marbles, and 3 blue marbles. What is the
+                probability of drawing a yellow or red marble? (round to two
+                digits)
+                <ul>
+                  <li class="sel">0.67</li>
+                </ul>
+              </li>
+              <li>
+                You have a bag of marbles. There are 3 red marbles, 2 green
+                marbles, 7 yellow marbles, and 3 blue marbles. What is the
+                probability of drawing something other than a red marble?
+                <ul>
+                  <li class="sel">0.8</li>
+                </ul>
+              </li>
+              <li>
+                You throw 2 dice. What is the probability that the sum of the
+                two dice will be 5? (round to two decimals)
+                <ul>
+                  <li class="sel">0.11</li>
+                </ul>
+              </li>
+              <li>
+                Which of the following pairs are independent events?
+                <em>Check all that apply.</em>
+                <ul>
+                  <li class="sel">Two coin flips</li>
+                  <li>A student&rsquo;s midterm and final grades in a class</li>
+                  <li>Draw an ace, leave it out, then draw an ace again</li>
+                  <li class="sel">
+                    Draw an ace, put it back, then draw an ace again
+                  </li>
+                </ul>
+              </li>
+              <li>
+                You win a game if you roll a die and get an odd number and flip
+                a coin and get tails. What is the probability that you win?
+                <ul>
+                  <li class="sel">0.25</li>
+                </ul>
+              </li>
+              <li>
+                Remember that P(A or B) = P(A) + P(B) - P(A and B). In other
+                words, the probability of both A and B happening, is the
+                probability that A happens, plus the probability that B happens,
+                minus the probability that both A and B happen. Using this
+                formula, what are the odds of getting a head from a coin toss or
+                a 5 from a roll of a die?
+                <ul>
+                  <li class="sel">0.58</li>
+                </ul>
+              </li>
+              <li>
+                A survey showed that 60% of all adults in your city take public
+                transportation to work. If 3 people are chosen at random, what
+                is the probability that they will all take public transportation
+                to work? (round to three decimal places)
+                <ul>
+                  <li class="sel">0.216</li>
+                </ul>
+              </li>
+              <li>
+                A deck has 52 cards, 13 of which are spades. What is the
+                probability that you draw two cards from a deck and both of them
+                are spades? (round to 4 decimals)
+                <ul>
+                  <li class="sel">0.0588</li>
+                </ul>
+              </li>
+              <li>
+                You flip a coin three times. Is it more likely to get heads all
+                three times or heads, then tails, then heads?
+                <ul>
+                  <li>HHH</li>
+                  <li>HTH</li>
+                  <li class="sel">They are both equally likely</li>
+                </ul>
+              </li>
+              <li>
+                The binomial distribution is a
+                <ul>
+                  <li>
+                    distribution that happens to be normal, with 68% of the data
+                    described by one standard deviation.
+                  </li>
+                  <li class="sel">
+                    distribution for which there are just two possible outcomes
+                    with fixed probabilities summing to one.
+                  </li>
+                  <li>
+                    distribution can be used to compute the probabilities in
+                    situations in which there are more than two possible
+                    outcomes.
+                  </li>
+                  <li>
+                    synonym for the Poisson distribution, a type of skewed
+                    distribution common in statistics.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Which of the following probabilities can be found using the
+                binomial distribution? <em>Check all that apply.</em>
+                <ul>
+                  <li class="sel">
+                    The probability that 3 out of 8 tosses of a coin will result
+                    in heads
+                  </li>
+                  <li class="sel">
+                    The probability that Susan will beat Shannon in two of their
+                    three tennis matches
+                  </li>
+                  <li class="missed">
+                    The probability of rolling at least two 3's and two 4's out
+                    of twelve rolls of a die
+                  </li>
+                  <li>The probability of getting a full house poker hand</li>
+                  <li class="sel">
+                    The probability that all 5 of your randomly-chosen group
+                    members will have passed the midterm
+                  </li>
+                  <li class="sel">
+                    The probability that a student blindly guessing will get at
+                    least 8 out of 10 multiple-choice questions correct
+                  </li>
+                  <li>
+                    The probability that most people in our class drink coffee.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </article>
+
+          <!-- REDLINE -->
+          <article id="hw1-redline" class="report-version">
+            <p>
+              Changed answers are <del>struck out</del>, and their replacement
+              is shown in <span class="fix">green and bold</span>. Some question
+              wording was also edited to make it clearer, shown the same way.
+            </p>
+            <ol class="quiz">
+              <li>
+                The paper says there is an 80% chance of rain today, so you plan
+                indoor activities. Then it doesn't rain. Was the forecast wrong?
+                <ul>
+                  <li>Yes</li>
+                  <li class="sel">No</li>
+                </ul>
+              </li>
+              <li>
+                Most probabilities we will deal with in psychology are 0 or 1.
+                <ul>
+                  <li>True</li>
+                  <li class="sel">False</li>
+                </ul>
+              </li>
+              <li>
+                The probability that you will do well on this quiz depends on
+                the probability of you completed the reading. In other words,
+                these two events are NOT independent.
+                <ul>
+                  <li class="sel">True</li>
+                  <li>False</li>
+                </ul>
+              </li>
+              <li>
+                The probability that you will do well on this quiz depends on
+                the probability of rain today. In other words, these two events
+                ARE independent.
+                <ul>
+                  <li><del>True</del></li>
+                  <li class="fix">False</li>
+                </ul>
+              </li>
+              <li>
+                You have a bag of marbles. There are 3 red marbles, 2 green
+                marbles, 7 yellow marbles, and 3 blue marbles. What is the
+                probability of drawing a blue marble?
+                <ul>
+                  <li class="sel">0.2</li>
+                </ul>
+              </li>
+              <li>
+                <del
+                  >You have a bag of marbles. There are 3 red marbles, 2 green
+                  marbles, 7 yellow marbles, and 3 blue marbles.</del
+                >
+                <span class="fix">Same bag of marbles.</span> What is the
+                probability of drawing a yellow or red marble? (round to two
+                digits)
+                <ul>
+                  <li class="sel">0.67</li>
+                </ul>
+              </li>
+              <li>
+                <del
+                  >You have a bag of marbles. There are 3 red marbles, 2 green
+                  marbles, 7 yellow marbles, and 3 blue marbles.</del
+                >
+                <span class="fix">Same bag of marbles.</span> What is the
+                probability of drawing something other than a red marble?
+                <ul>
+                  <li class="sel">0.8</li>
+                </ul>
+              </li>
+              <li>
+                You throw 2 dice. What is the probability that the sum of the
+                two dice will be 5? (round to two decimals)
+                <ul>
+                  <li class="sel">0.11</li>
+                </ul>
+              </li>
+              <li>
+                Which of the following pairs are independent events?
+                <em>Check all that apply.</em>
+                <ul>
+                  <li class="sel">Two coin flips</li>
+                  <li>A student&rsquo;s midterm and final grades in a class</li>
+                  <li>Draw an ace, leave it out, then draw an ace again</li>
+                  <li class="sel">
+                    Draw an ace, put it back, then draw an ace again
+                  </li>
+                </ul>
+              </li>
+              <li>
+                You win a game if you roll a die and get an odd number and flip
+                a coin and get tails. What is the probability that you win?
+                <ul>
+                  <li class="sel">0.25</li>
+                </ul>
+              </li>
+              <li>
+                Remember that P(A or B) = P(A) + P(B) - P(A and B).
+                <del
+                  >In other words, the probability of both A and B happening, is
+                  the probability that A happens, plus the probability that B
+                  happens, minus the probability that both A and B happen.</del
+                >
+                Using this formula, what are the odds of getting a head from a
+                coin toss or a 5 from a roll of a die?
+                <ul>
+                  <li class="sel">0.58</li>
+                </ul>
+              </li>
+              <li>
+                A survey showed that 60% of all adults in your city take public
+                transportation to work. If 3 people are chosen at random, what
+                is the probability that they will all take public transportation
+                to work? (round to three decimal places)
+                <ul>
+                  <li class="sel">0.216</li>
+                </ul>
+              </li>
+              <li>
+                A deck has 52 cards, 13 of which are spades. What is the
+                probability that you draw two cards from a deck and both of them
+                are spades? (round to 4 decimals)
+                <ul>
+                  <li class="sel">0.0588</li>
+                </ul>
+              </li>
+              <li>
+                You flip a coin three times. Is it more likely to get heads all
+                three times or heads, then tails, then heads?
+                <ul>
+                  <li>HHH</li>
+                  <li>HTH</li>
+                  <li class="sel">They are both equally likely</li>
+                </ul>
+              </li>
+              <li>
+                The binomial distribution is a
+                <ul>
+                  <li>
+                    distribution that happens to be normal, with 68% of the data
+                    described by one standard deviation.
+                  </li>
+                  <li class="sel">
+                    distribution for which there are just two possible outcomes
+                    with fixed probabilities summing to one.
+                  </li>
+                  <li>
+                    distribution can be used to compute the probabilities in
+                    situations in which there are more than two possible
+                    outcomes.
+                  </li>
+                  <li>
+                    synonym for the Poisson distribution, a type of skewed
+                    distribution common in statistics.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Which of the following probabilities can be found using the
+                binomial distribution? <em>Check all that apply.</em>
+                <ul>
+                  <li class="sel">
+                    The probability that 3 out of 8 tosses of a coin will result
+                    in heads
+                  </li>
+                  <li class="sel">
+                    The probability that Susan will beat Shannon in two of their
+                    three tennis matches
+                  </li>
+                  <li class="fix">
+                    The probability of rolling at least two 3's and two 4's out
+                    of twelve rolls of a die
+                  </li>
+                  <li>The probability of getting a full house poker hand</li>
+                  <li class="sel">
+                    The probability that all 5 of your randomly-chosen group
+                    members will have passed the midterm
+                  </li>
+                  <li class="sel">
+                    The probability that a student blindly guessing will get at
+                    least 8 out of 10 multiple-choice questions correct
+                  </li>
+                  <li>
+                    The probability that most people in our class drink coffee.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </article>
+
+          <!-- REVISED -->
+          <article id="hw1-revised" class="report-version">
+            <ol class="quiz">
+              <li>
+                The paper says there is an 80% chance of rain today, so you plan
+                indoor activities. Then it doesn't rain. Was the forecast wrong?
+                <ul>
+                  <li>Yes</li>
+                  <li class="sel">No</li>
+                </ul>
+              </li>
+              <li>
+                Most probabilities we will deal with in psychology are 0 or 1.
+                <ul>
+                  <li>True</li>
+                  <li class="sel">False</li>
+                </ul>
+              </li>
+              <li>
+                The probability that you will do well on this quiz depends on
+                the probability of you completed the reading. In other words,
+                these two events are NOT independent.
+                <ul>
+                  <li class="sel">True</li>
+                  <li>False</li>
+                </ul>
+              </li>
+              <li>
+                The probability that you will do well on this quiz depends on
+                the probability of rain today. In other words, these two events
+                ARE independent.
+                <ul>
+                  <li>True</li>
+                  <li class="sel">False</li>
+                </ul>
+              </li>
+              <li>
+                You have a bag of marbles. There are 3 red marbles, 2 green
+                marbles, 7 yellow marbles, and 3 blue marbles. What is the
+                probability of drawing a blue marble?
+                <ul>
+                  <li class="sel">0.2</li>
+                </ul>
+              </li>
+              <li>
+                Same bag of marbles. What is the probability of drawing a yellow
+                or red marble? (round to two digits)
+                <ul>
+                  <li class="sel">0.67</li>
+                </ul>
+              </li>
+              <li>
+                Same bag of marbles. What is the probability of drawing
+                something other than a red marble?
+                <ul>
+                  <li class="sel">0.8</li>
+                </ul>
+              </li>
+              <li>
+                You throw 2 dice. What is the probability that the sum of the
+                two dice will be 5? (round to two decimals)
+                <ul>
+                  <li class="sel">0.11</li>
+                </ul>
+              </li>
+              <li>
+                Which of the following pairs are independent events?
+                <em>Check all that apply.</em>
+                <ul>
+                  <li class="sel">Two coin flips</li>
+                  <li>A student&rsquo;s midterm and final grades in a class</li>
+                  <li>Draw an ace, leave it out, then draw an ace again</li>
+                  <li class="sel">
+                    Draw an ace, put it back, then draw an ace again
+                  </li>
+                </ul>
+              </li>
+              <li>
+                You win a game if you roll a die and get an odd number and flip
+                a coin and get tails. What is the probability that you win?
+                <ul>
+                  <li class="sel">0.25</li>
+                </ul>
+              </li>
+              <li>
+                Remember that P(A or B) = P(A) + P(B) - P(A and B). Using this
+                formula, what are the odds of getting a head from a coin toss or
+                a 5 from a roll of a die?
+                <ul>
+                  <li class="sel">0.58</li>
+                </ul>
+              </li>
+              <li>
+                A survey showed that 60% of all adults in your city take public
+                transportation to work. If 3 people are chosen at random, what
+                is the probability that they will all take public transportation
+                to work? (round to three decimal places)
+                <ul>
+                  <li class="sel">0.216</li>
+                </ul>
+              </li>
+              <li>
+                A deck has 52 cards, 13 of which are spades. What is the
+                probability that you draw two cards from a deck and both of them
+                are spades? (round to 4 decimals)
+                <ul>
+                  <li class="sel">0.0588</li>
+                </ul>
+              </li>
+              <li>
+                You flip a coin three times. Is it more likely to get heads all
+                three times or heads, then tails, then heads?
+                <ul>
+                  <li>HHH</li>
+                  <li>HTH</li>
+                  <li class="sel">They are both equally likely</li>
+                </ul>
+              </li>
+              <li>
+                The binomial distribution is a
+                <ul>
+                  <li>
+                    distribution that happens to be normal, with 68% of the data
+                    described by one standard deviation.
+                  </li>
+                  <li class="sel">
+                    distribution for which there are just two possible outcomes
+                    with fixed probabilities summing to one.
+                  </li>
+                  <li>
+                    distribution can be used to compute the probabilities in
+                    situations in which there are more than two possible
+                    outcomes.
+                  </li>
+                  <li>
+                    synonym for the Poisson distribution, a type of skewed
+                    distribution common in statistics.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Which of the following probabilities can be found using the
+                binomial distribution? <em>Check all that apply.</em>
+                <ul>
+                  <li class="sel">
+                    The probability that 3 out of 8 tosses of a coin will result
+                    in heads
+                  </li>
+                  <li class="sel">
+                    The probability that Susan will beat Shannon in two of their
+                    three tennis matches
+                  </li>
+                  <li class="sel">
+                    The probability of rolling at least two 3's and two 4's out
+                    of twelve rolls of a die
+                  </li>
+                  <li>The probability of getting a full house poker hand</li>
+                  <li class="sel">
+                    The probability that all 5 of your randomly-chosen group
+                    members will have passed the midterm
+                  </li>
+                  <li class="sel">
+                    The probability that a student blindly guessing will get at
+                    least 8 out of 10 multiple-choice questions correct
+                  </li>
+                  <li>
+                    The probability that most people in our class drink coffee.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <hr class="line" />
+            <h3>Summary of what I learned</h3>
+            <p>
+              Revisiting this assignment enabled me to progress from rote
+              memorization of formulas to a deeper comprehension of their
+              underlying logic. Re-examining the marble, dice, and coin problems
+              reinforced the addition and multiplication rules. The binomial
+              question proved most valuable; I discovered that my error stemmed
+              from failing to reframe the problem in binary terms (drawing it
+              out).
+            </p>
+          </article>
         </details>
       </section>
       <section id="hw2">
@@ -343,102 +723,507 @@
             trust your conclusions.
           </p>
           <hr class="line" />
-          <h3>How I would revise this activity</h3>
-          <p>Here is some data about soccer players:</p>
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Agility (seconds to complete tasks)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Neymar Jr</td>
-                <td>96</td>
-              </tr>
-              <tr>
-                <td>E. Hazard</td>
-                <td>95</td>
-              </tr>
-              <tr>
-                <td>L. Modri&#263;</td>
-                <td>93</td>
-              </tr>
-              <tr>
-                <td>L. Messi</td>
-                <td>91</td>
-              </tr>
-              <tr>
-                <td>Cristiano Ronaldo</td>
-                <td>87</td>
-              </tr>
-              <tr>
-                <td>L. Su&aacute;rez</td>
-                <td>82</td>
-              </tr>
-              <tr>
-                <td>K. De Bruyne</td>
-                <td>79</td>
-              </tr>
-              <tr>
-                <td>Sergio Ramos</td>
-                <td>78</td>
-              </tr>
-              <tr>
-                <td>R. Lewandowski</td>
-                <td>78</td>
-              </tr>
-              <tr>
-                <td>T. Kroos</td>
-                <td>70</td>
-              </tr>
-            </tbody>
-          </table>
-          <ol class="steps">
-            <li>
-              Create a boxplot of these data using
-              <a
-                href="https://www.statskingdom.com/advanced-boxplot-maker.html"
-                target="_blank"
-                rel="noopener"
-                >this app</a
-              >.
-            </li>
-            <li>
-              Find the 1st quartile, the 2nd quartile/median, and the 3rd
-              quartile.
-            </li>
-            <li>
-              Compare the quartiles you found to those created with the boxplot
-              to check it is correct.
-            </li>
-            <li>Why is a boxplot better than a bar plot for this data set?</li>
-            <li>
-              Is this data set skewed? If so, is the tail to the left or right?
-            </li>
-            <li>
-              Within this group, what is the best way to determine the central
-              tendency of agility? Why?
-            </li>
-          </ol>
-          <p>
-            This revision removes the extra data from the table that might
-            confuse students using the boxplot app for the first time. It also
-            pre-sorts the data, making it easier for students to find the 1st,
-            2nd (median), and 3rd quartiles on their own.
-          </p>
-          <hr class="line" />
-          <h3>Summary of what I learned</h3>
-          <p>
-            Revisiting this assignment made me recognize the impact that small
-            design choices have on the learning experience. By removing the
-            nationality column and pre-sorting the data, I was compelled to
-            evaluate which information was essential for the task and which
-            elements constituted unnecessary distractions. This process of
-            distilling the assignment to its core components deepened my
-            understanding of the underlying concepts.
-          </p>
+          <h3>Compare the original to the revision</h3>
+          <div class="toggle" role="tablist" aria-label="Report version">
+            <button
+              class="toggle-opt active"
+              data-target="activity1-original"
+              role="tab"
+              aria-selected="true"
+            >
+              Original
+            </button>
+            <button
+              class="toggle-opt redline"
+              data-target="activity1-redline"
+              role="tab"
+              aria-selected="false"
+            >
+              Redline
+            </button>
+            <button
+              class="toggle-opt"
+              data-target="activity1-revised"
+              role="tab"
+              aria-selected="false"
+            >
+              Revised
+            </button>
+          </div>
+          <!-- ORIGINAL -->
+          <article id="activity1-original" class="report-version active">
+            <ol class="steps">
+              <li>
+                Create a boxplot of these data using
+                <a
+                  href="https://www.statskingdom.com/advanced-boxplot-maker.html"
+                  target="_blank"
+                  rel="noopener"
+                  >this app</a
+                >.
+                <figure>
+                  <img src="assets/boxplot/boxplot.png" loading="lazy" />
+                  <figcaption>Boxplot</figcaption>
+                </figure>
+              </li>
+              <li>
+                Is the resulting boxplot accurate? How can you tell?
+                <p class="answer">
+                  Yes. The accuracy of the boxplot can be verified by
+                  calculating the five-number summary and comparing it to the
+                  plot. When sorted, the data are 70, 78, 78, 79, 82, 87, 91,
+                  93, 95, and 96, resulting in a minimum of 70, a first quartile
+                  (Q1) of 78, a median of 84.5, a third quartile (Q3) of 93, and
+                  a maximum of 96. These values correspond precisely to the box
+                  edges (78 and 93), the median line (84.5), and the whisker
+                  ends (70 and 96), confirming the accuracy of the boxplot.
+                </p>
+              </li>
+              <li>
+                Label the 1st quartile, the 2nd quartile/median, and 3rd
+                quartile.
+                <p class="answer">
+                  The first quartile (Q1) is 78, representing the left edge of
+                  the box. The second quartile (median) is 84.5, indicated by
+                  the line inside the box. The third quartile (Q3) is 93,
+                  corresponding to the right edge of the box. Therefore, the
+                  interquartile range (IQR), which encompasses the middle 50% of
+                  players, spans 15 seconds.
+                </p>
+              </li>
+              <li>
+                Why is a boxplot better than a bar plot for this data set?
+                <p class="answer">
+                  A boxplot provides a comprehensive summary of the distribution
+                  of a single quantitative variable, including its center,
+                  spread, range, and skew, within a single visual
+                  representation. In contrast, a bar plot displays one bar per
+                  player and presents only individual values, thereby obscuring
+                  the median, quartiles, and the overall distributional shape.
+                  Because the objective is to understand the distribution of
+                  agility across the group, the boxplot effectively conveys this
+                  summary, whereas a bar plot does not.
+                </p>
+              </li>
+              <li>
+                Is this data set skewed? If so, is the tail to the left or
+                right?
+                <p class="answer">
+                  The data exhibit near symmetry with a slight left (negative)
+                  skew. In the boxplot, the left whisker (70 to 78, a span of 8)
+                  is noticeably longer than the right whisker (93 to 96, a span
+                  of 3), indicating that the distribution's tail extends to the
+                  left. This mild skewness is supported by the similarity
+                  between the mean (84.9) and median (84.5).
+                </p>
+              </li>
+              <li>
+                Within this group, what is the best way to determine the central
+                tendency of agility? Why?
+                <p class="answer">
+                  The median (84.5) represents the most appropriate single
+                  measure in this context. The boxplot indicates a slightly
+                  longer left tail, making the median preferable due to its
+                  resistance to skewness and outliers, while the mean is
+                  influenced by the extended tail. In this dataset, the mean
+                  (84.9) and median (84.5) are nearly identical, indicating
+                  general agreement; however, the median remains the more robust
+                  and representative statistic.
+                </p>
+              </li>
+            </ol>
+          </article>
+          <!-- REDLINE -->
+          <article id="activity1-redline" class="report-version">
+            <p>
+              Here <del>are</del><ins>is</ins> some data about soccer
+              players<del>
+                (from
+                <a href="#" target="_blank" rel="noopener">here</a>)</del
+              ><ins>:</ins>
+            </p>
+            <del>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Nationality</th>
+                    <th>Agility (seconds to complete tasks)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Cristiano Ronaldo</td>
+                    <td>Portugal</td>
+                    <td>87</td>
+                  </tr>
+                  <tr>
+                    <td>Neymar Jr</td>
+                    <td>Brazil</td>
+                    <td>96</td>
+                  </tr>
+                  <tr>
+                    <td>L. Messi</td>
+                    <td>Argentina</td>
+                    <td>91</td>
+                  </tr>
+                  <tr>
+                    <td>K. De Bruyne</td>
+                    <td>Belgium</td>
+                    <td>79</td>
+                  </tr>
+                  <tr>
+                    <td>E. Hazard</td>
+                    <td>Belgium</td>
+                    <td>95</td>
+                  </tr>
+                  <tr>
+                    <td>L. Modri&#263;</td>
+                    <td>Croatia</td>
+                    <td>93</td>
+                  </tr>
+                  <tr>
+                    <td>L. Su&aacute;rez</td>
+                    <td>Uruguay</td>
+                    <td>82</td>
+                  </tr>
+                  <tr>
+                    <td>Sergio Ramos</td>
+                    <td>Spain</td>
+                    <td>78</td>
+                  </tr>
+                  <tr>
+                    <td>R. Lewandowski</td>
+                    <td>Poland</td>
+                    <td>78</td>
+                  </tr>
+                  <tr>
+                    <td>T. Kroos</td>
+                    <td>Germany</td>
+                    <td>70</td>
+                  </tr>
+                </tbody>
+              </table>
+            </del>
+
+            <ins>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Agility (seconds to complete tasks)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Neymar Jr</td>
+                    <td>96</td>
+                  </tr>
+                  <tr>
+                    <td>E. Hazard</td>
+                    <td>95</td>
+                  </tr>
+                  <tr>
+                    <td>L. Modri&#263;</td>
+                    <td>93</td>
+                  </tr>
+                  <tr>
+                    <td>L. Messi</td>
+                    <td>91</td>
+                  </tr>
+                  <tr>
+                    <td>Cristiano Ronaldo</td>
+                    <td>87</td>
+                  </tr>
+                  <tr>
+                    <td>L. Su&aacute;rez</td>
+                    <td>82</td>
+                  </tr>
+                  <tr>
+                    <td>K. De Bruyne</td>
+                    <td>79</td>
+                  </tr>
+                  <tr>
+                    <td>Sergio Ramos</td>
+                    <td>78</td>
+                  </tr>
+                  <tr>
+                    <td>R. Lewandowski</td>
+                    <td>78</td>
+                  </tr>
+                  <tr>
+                    <td>T. Kroos</td>
+                    <td>70</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ins>
+
+            <ol class="steps">
+              <li>
+                Create a boxplot of these data using
+                <a
+                  href="https://www.statskingdom.com/advanced-boxplot-maker.html"
+                  target="_blank"
+                  rel="noopener"
+                  >this app</a
+                >.
+                <figure>
+                  <img src="assets/boxplot/boxplot.png" loading="lazy" />
+                  <figcaption>Boxplot</figcaption>
+                </figure>
+              </li>
+              <li>
+                <del>Is the resulting boxplot accurate? How can you tell?</del
+                ><ins
+                  >Find the 1st quartile, the 2nd quartile/median, and the 3rd
+                  quartile.</ins
+                >
+                <p class="answer">
+                  <del
+                    >Yes. The accuracy of the boxplot can be verified by
+                    calculating the five-number summary and comparing it to the
+                    plot. When sorted, the data are 70, 78, 78, 79, 82, 87, 91,
+                    93, 95, and 96, resulting in a minimum of 70, a first
+                    quartile (Q1) of 78, a median of 84.5, a third quartile (Q3)
+                    of 93, and a maximum of 96. These values correspond
+                    precisely to the box edges (78 and 93), the median line
+                    (84.5), and the whisker ends (70 and 96), confirming the
+                    accuracy of the boxplot.</del
+                  ><ins
+                    >The median is calculated as the average of the 5th and 6th
+                    numbers: (82 + 87) / 2 = 84.5. The data are then divided
+                    into two halves. The lower half (70, 78, 78, 79, 82) yields
+                    a first quartile (Q1) of 78, while the upper half (87, 91,
+                    93, 95, 96) yields a third quartile (Q3) of 93.</ins
+                  >
+                </p>
+              </li>
+              <li>
+                <del
+                  >Label the 1st quartile, the 2nd quartile/median, and 3rd
+                  quartile.</del
+                ><ins
+                  >Compare the quartiles you found to those created with the
+                  boxplot to check it is correct.</ins
+                >
+                <p class="answer">
+                  <del
+                    >The first quartile (Q1) is 78, representing the left edge
+                    of the box. The second quartile (median) is 84.5, indicated
+                    by the line inside the box. The third quartile (Q3) is 93,
+                    corresponding to the right edge of the box. Therefore, the
+                    interquartile range (IQR), which encompasses the middle 50%
+                    of players, spans 15 seconds.</del
+                  ><ins
+                    >The hand-calculated Q1 (78), median (84.5), and Q3 (93)
+                    correspond precisely to the boxplot's left edge, center
+                    line, and right edge, respectively. The whiskers also align
+                    with the minimum (70) and maximum (96) values. Since the
+                    manually computed values and the application results are
+                    consistent, the boxplot's accuracy is confirmed.</ins
+                  >
+                </p>
+              </li>
+              <li>
+                Why is a boxplot better than a bar plot for this data set?
+                <p class="answer">
+                  A boxplot provides a comprehensive summary of the distribution
+                  of a single quantitative variable, including its center,
+                  spread, range, and skew, within a single visual
+                  representation. In contrast, a bar plot displays one bar per
+                  player and presents only individual values, thereby obscuring
+                  the median, quartiles, and the overall distributional shape.
+                  Because the objective is to understand the distribution of
+                  agility across the group, the boxplot effectively conveys this
+                  summary, whereas a bar plot does not.
+                </p>
+              </li>
+              <li>
+                Is this data set skewed? If so, is the tail to the left or
+                right?
+                <p class="answer">
+                  The data exhibit near symmetry with a slight left (negative)
+                  skew. In the boxplot, the left whisker (70 to 78, a span of 8)
+                  is noticeably longer than the right whisker (93 to 96, a span
+                  of 3), indicating that the distribution's tail extends to the
+                  left. This mild skewness is supported by the similarity
+                  between the mean (84.9) and median (84.5).
+                </p>
+              </li>
+              <li>
+                Within this group, what is the best way to determine the central
+                tendency of agility? Why?
+                <p class="answer">
+                  The median (84.5) represents the most appropriate single
+                  measure in this context. The boxplot indicates a slightly
+                  longer left tail, making the median preferable due to its
+                  resistance to skewness and outliers, while the mean is
+                  influenced by the extended tail. In this dataset, the mean
+                  (84.9) and median (84.5) are nearly identical, indicating
+                  general agreement; however, the median remains the more robust
+                  and representative statistic.
+                </p>
+              </li>
+            </ol>
+
+            <p>
+              <ins
+                >This revision removes the extra data from the table that might
+                confuse students using the boxplot app for the first time. It
+                also pre-sorts the data, making it easier for students to find
+                the 1st, 2nd (median), and 3rd quartiles on their own.</ins
+              >
+            </p>
+          </article>
+          <article id="activity1-revised" class="report-version">
+            <p>Here is some data about soccer players:</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Agility (seconds to complete tasks)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Neymar Jr</td>
+                  <td>96</td>
+                </tr>
+                <tr>
+                  <td>E. Hazard</td>
+                  <td>95</td>
+                </tr>
+                <tr>
+                  <td>L. Modri&#263;</td>
+                  <td>93</td>
+                </tr>
+                <tr>
+                  <td>L. Messi</td>
+                  <td>91</td>
+                </tr>
+                <tr>
+                  <td>Cristiano Ronaldo</td>
+                  <td>87</td>
+                </tr>
+                <tr>
+                  <td>L. Su&aacute;rez</td>
+                  <td>82</td>
+                </tr>
+                <tr>
+                  <td>K. De Bruyne</td>
+                  <td>79</td>
+                </tr>
+                <tr>
+                  <td>Sergio Ramos</td>
+                  <td>78</td>
+                </tr>
+                <tr>
+                  <td>R. Lewandowski</td>
+                  <td>78</td>
+                </tr>
+                <tr>
+                  <td>T. Kroos</td>
+                  <td>70</td>
+                </tr>
+              </tbody>
+            </table>
+            <ol class="steps">
+              <li>
+                Create a boxplot of these data using
+                <a
+                  href="https://www.statskingdom.com/advanced-boxplot-maker.html"
+                  target="_blank"
+                  rel="noopener"
+                  >this app</a
+                >.
+                <figure>
+                  <img src="assets/boxplot/boxplot.png" loading="lazy" />
+                  <figcaption>Boxplot</figcaption>
+                </figure>
+              </li>
+              <li>
+                Find the 1st quartile, the 2nd quartile/median, and the 3rd
+                quartile.
+                <p class="answer">
+                  The median is calculated as the average of the 5th and 6th
+                  numbers: (82 + 87) / 2 = 84.5. The data are then divided into
+                  two halves. The lower half (70, 78, 78, 79, 82) yields a first
+                  quartile (Q1) of 78, while the upper half (87, 91, 93, 95, 96)
+                  yields a third quartile (Q3) of 93.
+                </p>
+              </li>
+              <li>
+                Compare the quartiles you found to those created with the
+                boxplot to check it is correct.
+                <p class="answer">
+                  The hand-calculated Q1 (78), median (84.5), and Q3 (93)
+                  correspond precisely to the boxplot's left edge, center line,
+                  and right edge, respectively. The whiskers also align with the
+                  minimum (70) and maximum (96) values. Since the manually
+                  computed values and the application results are consistent,
+                  the boxplot's accuracy is confirmed.
+                </p>
+              </li>
+              <li>
+                Why is a boxplot better than a bar plot for this data set?
+                <p class="answer">
+                  A boxplot provides a comprehensive summary of the distribution
+                  of a single quantitative variable, including its center,
+                  spread, range, and skew, within a single visual
+                  representation. In contrast, a bar plot displays one bar per
+                  player and presents only individual values, thereby obscuring
+                  the median, quartiles, and the overall distributional shape.
+                  Because the objective is to understand the distribution of
+                  agility across the group, the boxplot effectively conveys this
+                  summary, whereas a bar plot does not.
+                </p>
+              </li>
+              <li>
+                Is this data set skewed? If so, is the tail to the left or
+                right?
+                <p class="answer">
+                  The data exhibit near symmetry with a slight left (negative)
+                  skew. In the boxplot, the left whisker (70 to 78, a span of 8)
+                  is noticeably longer than the right whisker (93 to 96, a span
+                  of 3), indicating that the distribution's tail extends to the
+                  left. This mild skewness is supported by the similarity
+                  between the mean (84.9) and median (84.5).
+                </p>
+              </li>
+              <li>
+                Within this group, what is the best way to determine the central
+                tendency of agility? Why?
+                <p class="answer">
+                  The median (84.5) represents the most appropriate single
+                  measure in this context. The boxplot indicates a slightly
+                  longer left tail, making the median preferable due to its
+                  resistance to skewness and outliers, while the mean is
+                  influenced by the extended tail. In this dataset, the mean
+                  (84.9) and median (84.5) are nearly identical, indicating
+                  general agreement; however, the median remains the more robust
+                  and representative statistic.
+                </p>
+              </li>
+            </ol>
+            <p>
+              This revision removes the extra data from the table that might
+              confuse students using the boxplot app for the first time. It also
+              pre-sorts the data, making it easier for students to find the 1st,
+              2nd (median), and 3rd quartiles on their own.
+            </p>
+            <hr class="line" />
+            <h3>Summary of what I learned</h3>
+            <p>
+              Revisiting this assignment made me recognize the impact that small
+              design choices have on the learning experience. By removing the
+              nationality column and pre-sorting the data, I was compelled to
+              evaluate which information was essential for the task and which
+              elements constituted unnecessary distractions. This process of
+              distilling the assignment to its core components deepened my
+              understanding of the underlying concepts.
+            </p>
+          </article>
         </details>
       </section>
       <section id="activity2">
