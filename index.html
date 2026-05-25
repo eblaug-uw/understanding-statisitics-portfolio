@@ -675,30 +675,569 @@
       <section id="hw2">
         <details>
           <summary>
-            <h2>Homework 2: <em>Title To Come</em></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            <h2>Homework 2: Chi-Square and Linear Regression</h2>
+            <p>
+              A quiz covering the chi-square goodness-of-fit test, contingency
+              tables, and linear regression — including predicting scores and
+              finding the error of prediction.
+            </p>
           </summary>
 
           <h3>Why I chose it</h3>
-          <p class="placeholder">
-            <em>Placeholder &mdash;</em> Lorem ipsum dolor sit amet consectetur
-            adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque
-            faucibus.
+          <p>
+            I selected this assignment because it brought together two core
+            inferential tools: the chi-square test for comparing observed and
+            expected frequencies, and linear regression for predicting one
+            variable from another. Practicing how to set up a contingency table,
+            interpret a p-value, apply a regression equation, and calculate the
+            error of prediction gives me a practical toolkit for analyzing and
+            reporting data.
           </p>
           <hr class="line" />
           <h3>Compare the original to the revision</h3>
-          <p class="placeholder">
-            <em>Placeholder &mdash;</em> Lorem ipsum dolor sit amet consectetur
-            adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque
-            faucibus.
-          </p>
-          <hr class="line" />
-          <h3>Summary of what I learned</h3>
-          <p class="placeholder">
-            <em>Placeholder &mdash;</em> Lorem ipsum dolor sit amet consectetur
-            adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque
-            faucibus.
-          </p>
+          <div class="toggle" role="tablist" aria-label="Quiz version">
+            <button
+              class="toggle-opt active"
+              data-target="hw2-original"
+              role="tab"
+              aria-selected="true"
+            >
+              Original
+            </button>
+            <button
+              class="toggle-opt redline"
+              data-target="hw2-redline"
+              role="tab"
+              aria-selected="false"
+            >
+              Redline
+            </button>
+            <button
+              class="toggle-opt"
+              data-target="hw2-revised"
+              role="tab"
+              aria-selected="false"
+            >
+              Revised
+            </button>
+          </div>
+
+          <!-- ORIGINAL -->
+          <article id="hw2-original" class="report-version active">
+            <ol class="quiz">
+              <li>
+                You have a bunch of lollipops in a brown paper bag (that you
+                can't see through), and you expect that each of the 4 colors has
+                the same frequency. You expect each color to be present at the
+                same frequency. What frequency is that?
+                <ul>
+                  <li class="sel">0.25</li>
+                </ul>
+              </li>
+              <li>
+                Now say you have 30 lollipops in total. How many lollipops do
+                you expect of each of the four colors? Please round your answer
+                to one decimal place&mdash;partial lollipops are OK.
+                <ul>
+                  <li class="sel">7.5</li>
+                </ul>
+              </li>
+              <li>
+                You open the bag, and you find 8 red, 5 green, 2 orange, 15
+                blue. Use the &chi;<sup>2</sup> test to test the null hypothesis
+                that the colors of the lollipops occur with equal frequency.
+                What is your p-value? Please round to 3 decimals places.
+                <ul>
+                  <li class="sel">0.006</li>
+                </ul>
+              </li>
+              <li>
+                Do you fail to reject (accept) or reject Ho?
+                <ul>
+                  <li>fail to reject (accept)</li>
+                  <li class="sel">reject</li>
+                </ul>
+              </li>
+              <li>
+                A group of 7th and 8th watches the horror film
+                <em>The Shining</em>. Afterwards, some had nightmares, and some
+                did not. What would the rows and columns of a 2x2 contingency
+                table look like?
+                <ul>
+                  <li>
+                    You want make a bar graph the number of students in each
+                    group. There will be four bars.
+                  </li>
+                  <li>
+                    You have only one variable: whether or not the kids are
+                    scared, so you will have table showing the number of kids
+                    and their p-values.
+                  </li>
+                  <li class="sel">
+                    7th and 8th graders could be the rows, and scared/not scared
+                    could be the columns. This gives you 4 cells in which to put
+                    the number of students in each category.
+                  </li>
+                  <li>
+                    You could simplify the data by putting 7th and 8th graders
+                    into one row, and then have scared/not scared in a column.
+                    This gives you 2 cells in which to put the number of
+                    students in each category.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                What is the best type of graph to make to illustrate a linear
+                regression?
+                <ul>
+                  <li>boxplot</li>
+                  <li>line graph</li>
+                  <li>histogram</li>
+                  <li class="sel">scatterplot</li>
+                </ul>
+              </li>
+              <li>
+                Referring to the graph type above, why do you need to make this
+                kind of graph before conducting a linear regression?
+                <ul>
+                  <li>to make sure the data are unimodal</li>
+                  <li>to see if the data are normally distributed</li>
+                  <li class="sel">to check if the data are somewhat linear</li>
+                  <li>to check if the data are distributed equally</li>
+                </ul>
+              </li>
+              <li>
+                You are comparing how much time students spend studying to their
+                final grade. What type of variable is time studying?
+                <ul>
+                  <li>dependent, continuous</li>
+                  <li>dependent nominal</li>
+                  <li class="sel">independent, continuous</li>
+                  <li>independent, nominal</li>
+                </ul>
+              </li>
+              <li>
+                With the experiment above, what kind of statistical test would
+                you use to look for a relationship?
+                <ul>
+                  <li>t-test</li>
+                  <li>&chi;<sup>2</sup> test</li>
+                  <li class="sel">regression</li>
+                  <li>analysis of variance</li>
+                </ul>
+              </li>
+              <li>
+                You find that the data fit a line according to the equation Y =
+                3X - 2. What would be the predicted Y score for a person scoring
+                4 on X?
+                <ul>
+                  <li class="sel">10</li>
+                </ul>
+              </li>
+              <li>
+                Suppose it is possible to predict someone's score on their
+                second test from their score on the first test. The regression
+                equation is: score.two = 1.1(score.one) + 9.5. They earned a 80%
+                on the first test. What percent score do you predict they'll get
+                on the second test?
+                <ul>
+                  <li class="wrong">90.38</li>
+                </ul>
+              </li>
+              <li>
+                Taking the example above, suppose they actually received a
+                perfect score: 100%! What is the error of prediction?
+                <ul>
+                  <li class="wrong">9.62</li>
+                </ul>
+              </li>
+              <li>
+                What is the most common criterion used to determine the
+                best-fitting line?
+                <ul>
+                  <li>The line that goes through the most points</li>
+                  <li>
+                    The line that has the same number of points above it as
+                    below it
+                  </li>
+                  <li class="sel">
+                    The line that minimizes the sum of squared errors of
+                    prediction
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Which of the following is the generic equation for a line?
+                <ul>
+                  <li>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></li>
+                  <li class="sel">y = mx + b</li>
+                  <li>
+                    x = (&minus;b &plusmn; &radic;(b<sup>2</sup> &minus; 4ac)) /
+                    2a
+                  </li>
+                  <li>
+                    &mu; = (x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> +
+                    &hellip; + x<sub>n</sub>) / n
+                  </li>
+                </ul>
+              </li>
+              <li>
+                What questions do you have about this material?
+                <p class="answer">None</p>
+              </li>
+            </ol>
+          </article>
+
+          <!-- REDLINE -->
+          <article id="hw2-redline" class="report-version">
+            <p>
+              Changed answers are <del>struck out</del>, and their replacement
+              is shown in <span class="fix">green and bold</span>. Only
+              questions 11 and 12 changed.
+            </p>
+            <ol class="quiz">
+              <li>
+                You have a bunch of lollipops in a brown paper bag (that you
+                can't see through), and you expect that each of the 4 colors has
+                the same frequency. You expect each color to be present at the
+                same frequency. What frequency is that?
+                <ul>
+                  <li class="sel">0.25</li>
+                </ul>
+              </li>
+              <li>
+                Now say you have 30 lollipops in total. How many lollipops do
+                you expect of each of the four colors? Please round your answer
+                to one decimal place&mdash;partial lollipops are OK.
+                <ul>
+                  <li class="sel">7.5</li>
+                </ul>
+              </li>
+              <li>
+                You open the bag, and you find 8 red, 5 green, 2 orange, 15
+                blue. Use the &chi;<sup>2</sup> test to test the null hypothesis
+                that the colors of the lollipops occur with equal frequency.
+                What is your p-value? Please round to 3 decimals places.
+                <ul>
+                  <li class="sel">0.006</li>
+                </ul>
+              </li>
+              <li>
+                Do you fail to reject (accept) or reject Ho?
+                <ul>
+                  <li>fail to reject (accept)</li>
+                  <li class="sel">reject</li>
+                </ul>
+              </li>
+              <li>
+                A group of 7th and 8th watches the horror film
+                <em>The Shining</em>. Afterwards, some had nightmares, and some
+                did not. What would the rows and columns of a 2x2 contingency
+                table look like?
+                <ul>
+                  <li>
+                    You want make a bar graph the number of students in each
+                    group. There will be four bars.
+                  </li>
+                  <li>
+                    You have only one variable: whether or not the kids are
+                    scared, so you will have table showing the number of kids
+                    and their p-values.
+                  </li>
+                  <li class="sel">
+                    7th and 8th graders could be the rows, and scared/not scared
+                    could be the columns. This gives you 4 cells in which to put
+                    the number of students in each category.
+                  </li>
+                  <li>
+                    You could simplify the data by putting 7th and 8th graders
+                    into one row, and then have scared/not scared in a column.
+                    This gives you 2 cells in which to put the number of
+                    students in each category.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                What is the best type of graph to make to illustrate a linear
+                regression?
+                <ul>
+                  <li>boxplot</li>
+                  <li>line graph</li>
+                  <li>histogram</li>
+                  <li class="sel">scatterplot</li>
+                </ul>
+              </li>
+              <li>
+                Referring to the graph type above, why do you need to make this
+                kind of graph before conducting a linear regression?
+                <ul>
+                  <li>to make sure the data are unimodal</li>
+                  <li>to see if the data are normally distributed</li>
+                  <li class="sel">to check if the data are somewhat linear</li>
+                  <li>to check if the data are distributed equally</li>
+                </ul>
+              </li>
+              <li>
+                You are comparing how much time students spend studying to their
+                final grade. What type of variable is time studying?
+                <ul>
+                  <li>dependent, continuous</li>
+                  <li>dependent nominal</li>
+                  <li class="sel">independent, continuous</li>
+                  <li>independent, nominal</li>
+                </ul>
+              </li>
+              <li>
+                With the experiment above, what kind of statistical test would
+                you use to look for a relationship?
+                <ul>
+                  <li>t-test</li>
+                  <li>&chi;<sup>2</sup> test</li>
+                  <li class="sel">regression</li>
+                  <li>analysis of variance</li>
+                </ul>
+              </li>
+              <li>
+                You find that the data fit a line according to the equation Y =
+                3X - 2. What would be the predicted Y score for a person scoring
+                4 on X?
+                <ul>
+                  <li class="sel">10</li>
+                </ul>
+              </li>
+              <li>
+                Suppose it is possible to predict someone's score on their
+                second test from their score on the first test. The regression
+                equation is: score.two = 1.1(score.one) + 9.5. They earned a 80%
+                on the first test. What percent score do you predict they'll get
+                on the second test?
+                <ul>
+                  <li><del>90.38</del></li>
+                  <li class="fix">97.5</li>
+                </ul>
+              </li>
+              <li>
+                Taking the example above, suppose they actually received a
+                perfect score: 100%! What is the error of prediction?
+                <ul>
+                  <li><del>9.62</del></li>
+                  <li class="fix">2.5</li>
+                </ul>
+              </li>
+              <li>
+                What is the most common criterion used to determine the
+                best-fitting line?
+                <ul>
+                  <li>The line that goes through the most points</li>
+                  <li>
+                    The line that has the same number of points above it as
+                    below it
+                  </li>
+                  <li class="sel">
+                    The line that minimizes the sum of squared errors of
+                    prediction
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Which of the following is the generic equation for a line?
+                <ul>
+                  <li>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></li>
+                  <li class="sel">y = mx + b</li>
+                  <li>
+                    x = (&minus;b &plusmn; &radic;(b<sup>2</sup> &minus; 4ac)) /
+                    2a
+                  </li>
+                  <li>
+                    &mu; = (x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> +
+                    &hellip; + x<sub>n</sub>) / n
+                  </li>
+                </ul>
+              </li>
+              <li>
+                What questions do you have about this material?
+                <p class="answer">None</p>
+              </li>
+            </ol>
+          </article>
+
+          <!-- REVISED -->
+          <article id="hw2-revised" class="report-version">
+            <ol class="quiz">
+              <li>
+                You have a bunch of lollipops in a brown paper bag (that you
+                can't see through), and you expect that each of the 4 colors has
+                the same frequency. You expect each color to be present at the
+                same frequency. What frequency is that?
+                <ul>
+                  <li class="sel">0.25</li>
+                </ul>
+              </li>
+              <li>
+                Now say you have 30 lollipops in total. How many lollipops do
+                you expect of each of the four colors? Please round your answer
+                to one decimal place&mdash;partial lollipops are OK.
+                <ul>
+                  <li class="sel">7.5</li>
+                </ul>
+              </li>
+              <li>
+                You open the bag, and you find 8 red, 5 green, 2 orange, 15
+                blue. Use the &chi;<sup>2</sup> test to test the null hypothesis
+                that the colors of the lollipops occur with equal frequency.
+                What is your p-value? Please round to 3 decimals places.
+                <ul>
+                  <li class="sel">0.006</li>
+                </ul>
+              </li>
+              <li>
+                Do you fail to reject (accept) or reject Ho?
+                <ul>
+                  <li>fail to reject (accept)</li>
+                  <li class="sel">reject</li>
+                </ul>
+              </li>
+              <li>
+                A group of 7th and 8th watches the horror film
+                <em>The Shining</em>. Afterwards, some had nightmares, and some
+                did not. What would the rows and columns of a 2x2 contingency
+                table look like?
+                <ul>
+                  <li>
+                    You want make a bar graph the number of students in each
+                    group. There will be four bars.
+                  </li>
+                  <li>
+                    You have only one variable: whether or not the kids are
+                    scared, so you will have table showing the number of kids
+                    and their p-values.
+                  </li>
+                  <li class="sel">
+                    7th and 8th graders could be the rows, and scared/not scared
+                    could be the columns. This gives you 4 cells in which to put
+                    the number of students in each category.
+                  </li>
+                  <li>
+                    You could simplify the data by putting 7th and 8th graders
+                    into one row, and then have scared/not scared in a column.
+                    This gives you 2 cells in which to put the number of
+                    students in each category.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                What is the best type of graph to make to illustrate a linear
+                regression?
+                <ul>
+                  <li>boxplot</li>
+                  <li>line graph</li>
+                  <li>histogram</li>
+                  <li class="sel">scatterplot</li>
+                </ul>
+              </li>
+              <li>
+                Referring to the graph type above, why do you need to make this
+                kind of graph before conducting a linear regression?
+                <ul>
+                  <li>to make sure the data are unimodal</li>
+                  <li>to see if the data are normally distributed</li>
+                  <li class="sel">to check if the data are somewhat linear</li>
+                  <li>to check if the data are distributed equally</li>
+                </ul>
+              </li>
+              <li>
+                You are comparing how much time students spend studying to their
+                final grade. What type of variable is time studying?
+                <ul>
+                  <li>dependent, continuous</li>
+                  <li>dependent nominal</li>
+                  <li class="sel">independent, continuous</li>
+                  <li>independent, nominal</li>
+                </ul>
+              </li>
+              <li>
+                With the experiment above, what kind of statistical test would
+                you use to look for a relationship?
+                <ul>
+                  <li>t-test</li>
+                  <li>&chi;<sup>2</sup> test</li>
+                  <li class="sel">regression</li>
+                  <li>analysis of variance</li>
+                </ul>
+              </li>
+              <li>
+                You find that the data fit a line according to the equation Y =
+                3X - 2. What would be the predicted Y score for a person scoring
+                4 on X?
+                <ul>
+                  <li class="sel">10</li>
+                </ul>
+              </li>
+              <li>
+                Suppose it is possible to predict someone's score on their
+                second test from their score on the first test. The regression
+                equation is: score.two = 1.1(score.one) + 9.5. They earned a 80%
+                on the first test. What percent score do you predict they'll get
+                on the second test?
+                <ul>
+                  <li class="sel">97.5</li>
+                </ul>
+              </li>
+              <li>
+                Taking the example above, suppose they actually received a
+                perfect score: 100%! What is the error of prediction?
+                <ul>
+                  <li class="sel">2.5</li>
+                </ul>
+              </li>
+              <li>
+                What is the most common criterion used to determine the
+                best-fitting line?
+                <ul>
+                  <li>The line that goes through the most points</li>
+                  <li>
+                    The line that has the same number of points above it as
+                    below it
+                  </li>
+                  <li class="sel">
+                    The line that minimizes the sum of squared errors of
+                    prediction
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Which of the following is the generic equation for a line?
+                <ul>
+                  <li>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></li>
+                  <li class="sel">y = mx + b</li>
+                  <li>
+                    x = (&minus;b &plusmn; &radic;(b<sup>2</sup> &minus; 4ac)) /
+                    2a
+                  </li>
+                  <li>
+                    &mu; = (x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> +
+                    &hellip; + x<sub>n</sub>) / n
+                  </li>
+                </ul>
+              </li>
+              <li>
+                What questions do you have about this material?
+                <p class="answer">None</p>
+              </li>
+            </ol>
+            <hr class="line" />
+            <h3>Summary of what I learned</h3>
+            <p>
+              Revisiting this assignment showed me that my only mistakes &mdash;
+              questions 11 and 12 &mdash; came from a slip in the percent
+              arithmetic, not a misunderstanding of the concept. Once I
+              carefully substituted into score.two = 1.1(80) + 9.5 = 97.5, the
+              prediction was straightforward, and the error of prediction
+              followed directly as 100 &minus; 97.5 = 2.5. It was a good
+              reminder that one early arithmetic error (the prediction) can
+              cascade into a second wrong answer (the error).
+            </p>
+          </article>
         </details>
       </section>
       <section id="activity1">
