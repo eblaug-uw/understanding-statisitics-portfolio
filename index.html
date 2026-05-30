@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=divice-with, initial-scale=1.0" />
     <title>Understanding Statisitics - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      onload="
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+          ],
+        })
+      "
+    ></script>
   </head>
   <body>
     <header class="topbar">
@@ -1765,32 +1785,125 @@
           </article>
         </details>
       </section>
+      <!-- ===== ACTIVITY 2 ===== -->
       <section id="activity2">
         <details>
           <summary>
-            <h2>Activity 2: <em>Title To Come</em></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            <h2>Activity 2: Catching a Fraudulent Study</h2>
+            <p>
+              This in-class activity focuses on the chi-square ($\chi^2$) test,
+              demonstrating how to compare observed counts with expected values
+              from a fair, random process and how to identify results that are
+              unlikely to be due to chance.
+            </p>
           </summary>
-
           <h3>Why I chose it</h3>
-          <p class="placeholder">
-            <em>Placeholder &mdash;</em> Lorem ipsum dolor sit amet consectetur
-            adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque
-            faucibus.
+          <p>
+            I missed class on the day hypothesis testing was discussed, so I
+            selected this activity to ensure that I genuinely understood the
+            $\chi^2$ test rather than simply recognizing its name. The
+            fraud-detection context was particularly appealing to me because it
+            demonstrates the $\chi^2$ test being applied in practical scenarios,
+            such as determining whether a published &ldquo;random sample&rdquo;
+            is plausible or if the data indicate possible tampering.
           </p>
-          <hr class="line" />
-          <h3>Compare the original to the revision</h3>
-          <p class="placeholder">
-            <em>Placeholder &mdash;</em> Lorem ipsum dolor sit amet consectetur
-            adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque
-            faucibus.
+
+          <h3>The scenario</h3>
+          <p>
+            Suppose you&rsquo;ve come across a medical study that you think is
+            fraudulent. The authors said they conducted a random control trial
+            on a new medication, but you found that 120 of the 200 people in the
+            trial were born in an even year. Test whether this is truly a random
+            sample.
           </p>
-          <hr class="line" />
+
+          <h3>Setting up the test</h3>
+          <p>
+            The $\chi^2$ test compares <em>observed</em> counts to
+            <em>expected</em> counts under the null hypothesis. The test
+            statistic is:
+          </p>
+
+          $$\chi^2 = \sum \frac{(O - E)^2}{E}$$
+
+          <ul class="steps">
+            <li>
+              <strong>$H_0$:</strong> the sample is random &mdash; even-year and
+              odd-year births occur in the expected 50/50 proportion.
+            </li>
+            <li>
+              <strong>$H_a$:</strong> the sample is not random &mdash; the
+              proportions differ from 50/50.
+            </li>
+            <li>$\alpha = 0.05$</li>
+          </ul>
+
+          <h3>The math</h3>
+          <table class="data-table chi-table">
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Observed (<em>O</em>)</th>
+                <th>Expected (<em>E</em>)</th>
+                <th>$\dfrac{(O - E)^2}{E}$</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Born in even year</td>
+                <td>120</td>
+                <td>100</td>
+                <td class="math-cell">$\dfrac{(120-100)^2}{100} = 4$</td>
+              </tr>
+              <tr>
+                <td>Born in odd year</td>
+                <td>80</td>
+                <td>100</td>
+                <td class="math-cell">$\dfrac{(80-100)^2}{100} = 4$</td>
+              </tr>
+              <tr>
+                <td><strong>Total</strong></td>
+                <td>200</td>
+                <td>200</td>
+                <td class="math-cell">$\chi^2 = 8$</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            With one degree of freedom ($df = 1$, two categories minus one),
+            $\chi^2 = 8$ gives a p-value of about $p \approx 0.0047$. Using the
+            Excel function
+            <code>=CHISQ.TEST(observed_range, expected_range)</code>.
+          </p>
+
+          <h3>Conclusion</h3>
+          <p>
+            The p-value of approximately $0.0047$ is well below the significance
+            threshold of $\alpha = 0.05$ (and also below $0.01$),
+            <strong>leading to the rejection of the null hypothesis</strong>. A
+            120/80 split deviates substantially from the expected 100/100
+            distribution under random sampling, making it unlikely to have
+            occurred by chance alone. While this result does not constitute
+            proof of data fabrication, it provides a reviewer with strong
+            statistical justification to question how a purportedly random
+            sample could produce such a non-random outcome.
+          </p>
+
           <h3>Summary of what I learned</h3>
-          <p class="placeholder">
-            <em>Placeholder &mdash;</em> Lorem ipsum dolor sit amet consectetur
-            adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque
-            faucibus.
+          <p>
+            Working through this activity outside of class clarified two key
+            points for me. First, &ldquo;expected&rdquo; in the context of the
+            $\chi^2$ test does not refer to what one hopes to observe; rather,
+            it denotes the outcome predicted by the null hypothesis if no
+            unusual effects are present. Second, the test operates in an
+            intuitive manner: it aggregates the extent to which each category
+            deviates from its expected value, with each deviation weighted
+            according to the magnitude of the expected count. Thus, a small
+            deviation from a large expected count is less significant than the
+            same deviation from a smaller expected count. Understanding the
+            formula in this way made the application to fraud detection seem
+            logical, as the $\chi^2$ test effectively functions as a
+            quantitative measure of suspicion.
           </p>
         </details>
       </section>

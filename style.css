@@ -666,3 +666,22 @@ figcaption {
   text-transform: uppercase;
   color: var(--purple);
 }
+.formula {
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  margin: 0.75rem 0 1rem;
+}
+.chi-table .math-cell,
+.chi-table th:last-child {
+  white-space: nowrap;
+  text-align: center;
+  min-width: 11em;
+}
+.chi-table {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: fit-content !important;
+  max-width: 100%;
+}
