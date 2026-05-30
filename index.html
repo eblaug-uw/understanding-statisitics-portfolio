@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
@@ -1912,7 +1916,7 @@
           <summary>
             <h2>Descriptive Statistics Report</h2>
             <p>
-              A descriptive analysis of The Great British Bake Off — who
+              A descriptive analysis of The Great British Bake Off: who
               competes, who wins, and how age, gender expression, and apparent
               race are distributed across 16 series. Use the toggle to compare
               the original report with the revised version.
@@ -2713,10 +2717,18 @@
             </p>
           </summary>
           <h3>Why I chose it</h3>
-          <p class="placeholder">
-            <em>Placeholder &mdash;</em> Lorem ipsum dolor sit amet consectetur
-            adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque
-            faucibus.
+          <p>
+            For this Statistics in the Wild assignment, I aimed to move beyond
+            the static-infographic format used in earlier projects and create an
+            interactive tool for readers. While a probability chart can
+            illustrate that a four-of appears in an opening hand approximately
+            40% of the time, it does not allow users to explore scenarios such
+            as, "What if I only include three copies?" or "What if I reduce the
+            deck to 22 lands?" These are precisely the questions that arise
+            during deckbuilding in Magic. Transforming the hypergeometric
+            distribution into adjustable sliders provided a more effective and
+            transparent method for teaching this concept than relying on another
+            bar chart.
           </p>
           <hr class="line" />
           <div class="toggle" role="tablist" aria-label="Project version">
@@ -2788,14 +2800,265 @@
           </article>
           <!-- REVISED -->
           <article id="wild-revised" class="report-version">
-            <p class="placeholder">Revised version coming soon.</p>
+            <div class="mtg-exhibit">
+              <div class="header">
+                <div class="config-pills">
+                  <div class="cpill">
+                    <div class="cn">60</div>
+                    <div class="cl">Deck size</div>
+                  </div>
+                  <div class="cpill">
+                    <div class="cn">24</div>
+                    <div class="cl">Lands</div>
+                  </div>
+                </div>
+                <div class="header-center">
+                  <h1>Opening Hand Probabilities</h1>
+                  <p class="sub">
+                    Hypergeometric distribution · 60-card deck · 7-card opening
+                    hand
+                  </p>
+                </div>
+                <div class="config-pills">
+                  <div class="cpill">
+                    <div class="cn">4</div>
+                    <div class="cl">Key copies</div>
+                  </div>
+                  <div class="cpill">
+                    <div class="cn">7</div>
+                    <div class="cl">Cards drawn</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="body">
+                <!-- ─── TL: MANA CURVE ─── -->
+                <div class="col">
+                  <div class="sec-title"><span>Mana curve</span></div>
+                  <div class="curve-sliders">
+                    <div class="csl">
+                      <label>1-drop</label
+                      ><input
+                        type="range"
+                        id="mv1"
+                        min="0"
+                        max="12"
+                        value="12"
+                        step="4"
+                      /><span class="cv" id="mv1v">12</span>
+                    </div>
+                    <div class="csl">
+                      <label>2-drop</label
+                      ><input
+                        type="range"
+                        id="mv2"
+                        min="0"
+                        max="12"
+                        value="8"
+                        step="4"
+                      /><span class="cv" id="mv2v">8</span>
+                    </div>
+                    <div class="csl">
+                      <label>3-drop</label
+                      ><input
+                        type="range"
+                        id="mv3"
+                        min="0"
+                        max="12"
+                        value="8"
+                        step="4"
+                      /><span class="cv" id="mv3v">8</span>
+                    </div>
+                    <div class="csl">
+                      <label>4-drop</label
+                      ><input
+                        type="range"
+                        id="mv4"
+                        min="0"
+                        max="12"
+                        value="4"
+                        step="4"
+                      /><span class="cv" id="mv4v">4</span>
+                    </div>
+                    <div class="csl">
+                      <label>5+-drop</label
+                      ><input
+                        type="range"
+                        id="mv5"
+                        min="0"
+                        max="12"
+                        value="4"
+                        step="4"
+                      /><span class="cv" id="mv5v">4</span>
+                    </div>
+                  </div>
+                  <div class="meta-row">
+                    <span>Total spells: <span id="totalSpells">—</span></span>
+                    <span>Avg mana value: <span id="avgMv">—</span></span>
+                  </div>
+                  <div class="curve-bars" id="curveBars"></div>
+                  <div class="divider"></div>
+                  <div class="sec-title">
+                    <span>% of spells castable on curve by turn</span>
+                  </div>
+                  <div id="castChart"></div>
+                  <p class="note" style="margin-top: 10px">
+                    Castability assumes hitting every land drop. Adjust sliders
+                    above to model different deck archetypes.
+                  </p>
+                </div>
+
+                <!-- ─── TR: OPENING HAND ─── -->
+                <div class="col">
+                  <div class="sec-title"><span>Opening hand</span></div>
+
+                  <div class="sbox good hero" style="margin-bottom: 12px">
+                    <div class="sn" id="idealPct">—</div>
+                    <div class="sl">Ideal opener</div>
+                    <div
+                      style="
+                        font-size: 11px;
+                        color: var(--muted);
+                        font-style: italic;
+                        margin-top: 3px;
+                        text-transform: none;
+                        letter-spacing: 0;
+                      "
+                    >
+                      2–3 lands + ≥1 castable spell
+                    </div>
+                  </div>
+
+                  <div class="stat4">
+                    <div class="sbox">
+                      <div class="sn" id="p1drop">—</div>
+                      <div class="sl">P(≥1 one-drop)</div>
+                    </div>
+                    <div class="sbox">
+                      <div class="sn" id="p2drop">—</div>
+                      <div class="sl">P(≥1 two-drop)</div>
+                    </div>
+                    <div class="sbox">
+                      <div class="sn" id="pT1">—</div>
+                      <div class="sl">P(castable T1)</div>
+                    </div>
+                    <div class="sbox">
+                      <div class="sn" id="pT2">—</div>
+                      <div class="sl">P(castable T2)</div>
+                    </div>
+                  </div>
+
+                  <div class="legend-row">
+                    <div class="leg">
+                      <div
+                        class="leg-dot"
+                        style="background: rgba(0, 0, 0, 0.12)"
+                      ></div>
+                      0 seen
+                    </div>
+                    <div class="leg">
+                      <div class="leg-dot" style="background: #5a8f6a"></div>
+                      1 seen
+                    </div>
+                    <div class="leg">
+                      <div class="leg-dot" style="background: #3a6f4a"></div>
+                      2 seen
+                    </div>
+                    <div class="leg">
+                      <div class="leg-dot" style="background: #1a4d2e"></div>
+                      3+
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      font-family: &quot;Cinzel&quot;, serif;
+                      font-size: 10px;
+                      letter-spacing: 0.1em;
+                      color: var(--muted);
+                      text-transform: uppercase;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    Expected drop distribution in opener
+                  </div>
+                  <div id="distChart"></div>
+                  <p class="note" id="handNote" style="margin-top: 8px"></p>
+                </div>
+
+                <!-- ─── BL: WHY FOUR COPIES ─── -->
+                <div class="col">
+                  <div class="sec-title"><span>Why four copies</span></div>
+
+                  <div class="sbox good hero" style="margin-bottom: 12px">
+                    <div class="sn" id="atLeast1">—</div>
+                    <div class="sl">At least 1 copy in opening hand</div>
+                  </div>
+
+                  <div class="stat3">
+                    <div class="sbox bad">
+                      <div class="sn" id="zeroCard">—</div>
+                      <div class="sl">No copies</div>
+                    </div>
+                    <div class="sbox">
+                      <div class="sn" id="exactly1">—</div>
+                      <div class="sl">Exactly 1</div>
+                    </div>
+                    <div class="sbox">
+                      <div class="sn" id="atLeast2">—</div>
+                      <div class="sl">2 or more</div>
+                    </div>
+                  </div>
+
+                  <div
+                    style="
+                      font-family: &quot;Cinzel&quot;, serif;
+                      font-size: 10px;
+                      letter-spacing: 0.1em;
+                      color: var(--muted);
+                      text-transform: uppercase;
+                      margin: 14px 0 8px;
+                    "
+                  >
+                    Opening hand odds by copy count
+                  </div>
+                  <div id="copiesChart"></div>
+                </div>
+
+                <!-- ─── BR: LAND DISTRIBUTION ─── -->
+                <div class="col">
+                  <div class="sec-title"><span>Land distribution</span></div>
+                  <div id="landChart"></div>
+                </div>
+              </div>
+
+              <div class="footer">
+                Probabilities computed via hypergeometric distribution · Combo
+                and joint probabilities use inclusion-exclusion: P(A∩B) = 1 −
+                P(Ā) − P(B̄) + P(Ā∩B̄)
+              </div>
+            </div>
           </article>
           <hr class="line" />
           <h3>Summary of what I learned</h3>
-          <p class="placeholder">
-            <em>Placeholder &mdash;</em> Lorem ipsum dolor sit amet consectetur
-            adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque
-            faucibus.
+          <p>
+            The most significant technique I encountered during this project was
+            the application of the complement principle. This principle
+            addresses questions such as, "What is the probability of seeing at
+            least one of my fours in my opening hand?" Although this initially
+            appears to require summing over four possible outcomes, reframing
+            the question as "What is the probability of seeing none?" reduces
+            the problem to a single P(X = 0) calculation. Subtracting this value
+            from one provides the desired probability.<br />
+
+            This same approach underlies the inclusion-exclusion formula
+            presented at the bottom of the infographic. For example, P(at least
+            one land and at least one castable spell) is more efficiently
+            computed by subtracting the probability of neither event occurring
+            from one, rather than by enumerating all joint outcomes directly. I
+            had previously encountered the complement principle in class, but
+            observing each "at least one" scenario in the widget reduced to a
+            single P(X = 0) calculation demonstrated its value as a practical
+            analytical tool rather than merely a theoretical concept.
           </p>
         </details>
       </section>
